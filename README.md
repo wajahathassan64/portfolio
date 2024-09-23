@@ -22,14 +22,14 @@ SadaPay offers a seamless digital wallet and Mastercard virtual debit card exper
 </p>
 
 ### Contributions
-- At SadaPay, I built key features such as the Card Ordering process, designed and developed the Transaction History, and transformed simple Transaction Details into dynamic ones. This enhancement not only helped the Card Squad but also made life easier for other squads using the Transaction Details feature. The Card Ordering feature has generated significant revenue for SadaPay. Additionally, I customized and optimized the main application dashboard to display Card tiles and Transaction details, along with other widgets.
-- Built a high-quality product with 97% code coverage via unit testing and 100% feature coverage through UI testing, with extreme programming practices such as TDD, Trunk-Based Development, Ping Pong Programming.
-- Created a micro frontend app for testing the feature module, which reduced the feature testing time by 35%.
-- Automated iOS app CI/CD workflows with GitHub Actions and Bitrise, improving feature delivery time by 20%.
-- Introduced a common module with Kotlin Multiplatform for analytics events, reducing discrepancies between iOS and Android by 95%.
-- Implemented MVVM modular architecture for an iOS project, reducing release friction, enabling independent squad work, and ensuring pipeline stability.
-- Implemented UI test structure using SBUITestTunnel, reducing QA dependency by 90% and accelerating the application delivery process by 75%.
-- Collaborated with the team to customize the OpenAPI generator, streamlining API contracts across platforms and eliminating 100% discrepancies across all platforms, which significantly improved product quality.
+- At SadaPay, I built key features such as the **Card Ordering process**, designed and developed the **Transaction History**, and transformed simple Transaction Details into **dynamic ones**. This enhancement not only helped the **Card Squad** but also made life easier for other squads. The **Card Ordering feature generated significant revenue** for SadaPay. Additionally, I **customized and optimized the main application dashboard** to display Card tiles and Transaction details, along with other widgets.
+- Built a **high-quality product with 97% code coverage** via unit testing and **100% feature coverage** through UI testing, using **extreme programming practices** like **TDD**, **Trunk-Based Development**, and **Ping Pong Programming**.
+- Created a **micro frontend app for testing the feature module**, reducing the feature testing time by **35%**.
+- **Automated iOS app CI/CD workflows** with **GitHub Actions and Bitrise**, improving feature delivery time by **20%**.
+- Introduced a **common module with Kotlin Multiplatform for analytics events**, reducing discrepancies between iOS and Android by **95%**.
+- Implemented **MVVM modular architecture** for an iOS project, reducing release friction, enabling **independent squad work**, and ensuring **pipeline stability**.
+- Implemented **UI test structure using SBUITestTunnel**, reducing **QA dependency by 90%** and accelerating the application delivery process by **75%**.
+- Collaborated with the team to **customize the OpenAPI generator**, streamlining **API contracts across platforms** and eliminating **100% of discrepancies**, which significantly **improved product quality**.
 
 ### Technologies
 `eXtreme Programming` `Test-Driven Development` `Ping Pong Programming` `Mobing` `Continuous Integration (CI)` `Continuous Delivery (CD)` `Unit Testing` `UI Testing` `Swift` `MVVM (Model View View-Model)` `Github Actions` `Bitrise` `Modular architecture` `Kotling Multiplatform (KMM)`
@@ -56,11 +56,11 @@ YAP redefines digital banking, offering a seamless and feature-rich experience. 
 </p>
 
 ### Contributions
-- Led the development of the YAP iOS mobile app, which reached over a million customers within its first year of launch and began processing millions of transactions each month.
-- Started the iOS project from ground up, creating a modular architecture with MVVM-C with dependency containers and RxSwift. This maintained domain boundaries and enabled teams to work independently in different features.
-- Developed an in-house SDK for KYC using iOS Core ML and Amazon ML API, eliminating third-party dependencies and significantly reducing operational costs.
-- Integrated the Promon Shielding SDK to enhance the security of the YAP app.
-- Led the live support team and reduced a backlog of 500 tickets within one week.
+- **Led the development of the YAP iOS mobile app**, which reached **over a million customers** within its first year and processed **millions of transactions** monthly.
+- **Started the iOS project from the ground up**, creating a **modular architecture** with **MVVM-C**, dependency containers, and **RxSwift**, enabling teams to work independently on different features.
+- **Developed an in-house SDK for KYC** using **iOS Core ML** and **Amazon ML API**, eliminating third-party dependencies and significantly **reducing operational costs**.
+- **Integrated the Promon Shielding SDK** to enhance the **security** of the YAP app.
+- **Led the live support team**, reducing a **backlog of 500 tickets** within one week.
 
 ### Technologies
 `Swift` `MVVM (Model View View-Model)` `RxSwift` `Modular architecture` `Core ML` `Machine Learning`
