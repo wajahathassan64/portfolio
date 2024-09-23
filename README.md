@@ -65,7 +65,7 @@ YAP redefines digital banking, offering a seamless and feature-rich experience. 
 ### Technologies
 `Swift` `MVVM (Model View View-Model)` `RxSwift` `Modular architecture` `Core ML` `Machine Learning`
 
-# [EDB Business Banking App](https://apps.apple.com/us/app/edb-business-banking/id1583562661)
+# [EDB Business Banking](https://apps.apple.com/us/app/edb-business-banking/id1583562661)
 EDB Business Banking application is designed to cater to the financial needs of businesses, offering a comprehensive suite of features that streamline banking operations. With over multi million users, the app is trusted by businesses of various sizes to manage their financial transactions efficiently. It allows users to view and manage multiple business accounts, monitor transaction history, and oversee sub-accounts for detailed financial oversight.
 
 The app supports local and international payments, enabling seamless fund transfers between business accounts. Additionally, it offers robust expense tracking tools, allowing businesses to generate detailed financial reports and categorize expenses. These features help businesses optimize cash management and working capital, ensuring smooth daily operations.
@@ -89,6 +89,13 @@ Security is a top priority, with two-factor authentication and role-based access
     title="Home"
     >
 </p>
+
+### Contributions
+- Led the development of a business banking app with **no minimum balance** account creation.
+- Built **modular MVVM-C architecture** from the ground up, improving scalability and team efficiency.
+- Integrated **Promon Shielding SDK** to enhance app security.
+- Implemented **local transfers, loan management**, and **EID scanning** for seamless onboarding.
+- Added **ATM/CDM map support** and integrated **Core Data** for offline access.
 
 ### Technologies
 `Swift` `MVVM (Model View View-Model)` `Coordinators` `RxSwift` `Modular architecture` `EID Scanner`
