@@ -44,14 +44,14 @@ YAP redefines digital banking, offering a seamless and feature-rich experience. 
     title="Card"
     >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img
-    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/yap2.webp" 
-    width="230"
-    title="Analytics"
-    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img 
     src="https://github.com/wajahathassan64/portfolio/blob/main/assets/yap3.webp" 
     width="230"
     title="Home"
+    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/yap2.webp" 
+    width="230"
+    title="Analytics"
     >
 </p>
 
@@ -64,3 +64,31 @@ YAP redefines digital banking, offering a seamless and feature-rich experience. 
 
 ### Technologies
 `Swift` `MVVM (Model View View-Model)` `RxSwift` `Modular architecture` `Core ML` `Machine Learning`
+
+# [EDB Business Banking App](https://apps.apple.com/us/app/edb-business-banking/id1583562661)
+EDB Business Banking application is designed to cater to the financial needs of businesses, offering a comprehensive suite of features that streamline banking operations. With over multi million users, the app is trusted by businesses of various sizes to manage their financial transactions efficiently. It allows users to view and manage multiple business accounts, monitor transaction history, and oversee sub-accounts for detailed financial oversight.
+
+The app supports local and international payments, enabling seamless fund transfers between business accounts. Additionally, it offers robust expense tracking tools, allowing businesses to generate detailed financial reports and categorize expenses. These features help businesses optimize cash management and working capital, ensuring smooth daily operations.
+
+Security is a top priority, with two-factor authentication and role-based access controls for team members, ensuring secure and flexible account management. The app also offers card management features, giving businesses control over their spending through debit or credit cards. Serving **over multi-million businesses**, the EDB Business Banking app has significantly impacted business operations, contributing to increased efficiency and revenue generation across various sectors.
+
+<p align="center">
+  <img 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/edb1.webp"
+    width="230" 
+    title="Card"
+    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/edb2.webp" 
+    width="230"
+    title="Analytics"
+    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/edb3.webp" 
+    width="230"
+    title="Home"
+    >
+</p>
+
+### Technologies
+`Swift` `MVVM (Model View View-Model)` `Coordinators` `RxSwift` `Modular architecture` `EID Scanner`
