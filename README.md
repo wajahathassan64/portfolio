@@ -5,17 +5,17 @@ SadaPay offers a seamless digital wallet and Mastercard virtual debit card exper
 
 <p align="center">
   <img 
-    src="https://github.com/wajahathassan64/portfolio/blob/master/assets/sadapay1.PNG"
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/sadapay1.PNG"
     width="230" 
     title="Personal dashboard"
     >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img
-    src="https://github.com/wajahathassan64/portfolio/blob/master/assets/sadapay2.PNG" 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/sadapay2.PNG" 
     width="230"
     title="Business dashboard"
     >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img 
-    src="https://github.com/wajahathassan64/portfolio/blob/master/assets/sadapay3.PNG" 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/sadapay3.PNG" 
     width="230"
     title="Pay your bills"
     >
@@ -39,17 +39,17 @@ YAP redefines digital banking, offering a seamless and feature-rich experience. 
 
 <p align="center">
   <img 
-    src="https://github.com/wajahathassan64/portfolio/blob/master/assets/yap1.webp"
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/yap1.webp"
     width="230" 
     title="Card"
     >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img
-    src="https://github.com/wajahathassan64/portfolio/blob/master/assets/yap2.webp" 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/yap2.webp" 
     width="230"
     title="Analytics"
     >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img 
-    src="https://github.com/wajahathassan64/portfolio/blob/master/assets/yap3.webp" 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/yap3.webp" 
     width="230"
     title="Home"
     >
