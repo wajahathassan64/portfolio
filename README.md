@@ -33,3 +33,34 @@ SadaPay offers a seamless digital wallet and Mastercard virtual debit card exper
 
 ### Technologies
 `eXtreme Programming` `Test-Driven Development` `Ping Pong Programming` `Mobing` `Continuous Integration (CI)` `Continuous Delivery (CD)` `Unit Testing` `UI Testing` `Swift` `MVVM (Model View View-Model)` `Github Actions` `Bitrise` `Modular architecture` `Kotling Multiplatform (KMM)`
+
+# [YAP – Your Digital Banking App](https://apps.apple.com/us/app/yap-your-digital-banking-app/id1498302242)
+YAP redefines digital banking, offering a seamless and feature-rich experience. Users can sign up in just 30 seconds to access a digital banking account with no hidden fees, no minimum balance, and no paperwork. YAP provides comprehensive money management tools, including spending analytics, virtual cards, and a Mastercard debit card. Users can enjoy multi-currency support, bill splitting, local and international transfers, QR payments, and bill payments. The app offers customizable card designs and exclusive perks, along with robust security measures to protect user funds. YAP's user-friendly interface includes card controls, instant fee-free transfers within the YAP network, and detailed spending analytics. With 24/7 accessibility and competitive international transfer rates, YAP ensures effortless money management and secure digital banking, making it an all-in-one solution for modern financial needs.
+
+<p align="center">
+  <img 
+    src="https://github.com/pseudozain/portfolio/blob/master/Images/yap1.webp"
+    width="230" 
+    title="Card"
+    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img
+    src="https://github.com/pseudozain/portfolio/blob/master/Images/yap2.webp" 
+    width="230"
+    title="Analytics"
+    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img 
+    src="https://github.com/pseudozain/portfolio/blob/master/Images/yap3.webp" 
+    width="230"
+    title="Home"
+    >
+</p>
+
+### Contributions
+- Led the development of the YAP iOS mobile app, which reached over a million customers within its first year of launch and began processing millions of transactions each month.
+- Started the iOS project from ground up, creating a modular architecture with MVVM-C with dependency containers and RxSwift. This maintained domain boundaries and enabled teams to work independently in different features.
+- Developed an in-house SDK for KYC using iOS Core ML and Amazon ML API, eliminating third-party dependencies and significantly reducing operational costs.
+- Integrated the Promon Shielding SDK to enhance the security of the YAP app.
+- Led the live support team and reduced a backlog of 500 tickets within one week.
+
+### Technologies
+`Swift` `MVVM (Model View View-Model)` `RxSwift` `Modular architecture` `Core ML` `Machine Learning`
