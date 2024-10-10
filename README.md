@@ -96,7 +96,7 @@ Security is a top priority, with two-factor authentication and role-based access
     >
 </p>
 
-# [Revizer]
+# Revizer
 Revizer is a Financial Management module for an ERP system, designed to streamline financial operations and enhance decision-making for businesses. This module provides real-time insights into financial transactions, supports budget management, tracks expenses, and generates financial reports, ensuring accurate and transparent financial oversight. By integrating various financial tools such as accounts payable, accounts receivable, and general ledger management, the module simplifies complex financial processes, improving efficiency and enabling businesses to maintain compliance with regulatory requirements. The project focused on user-friendly interfaces and robust data security measures.
 
 <p align="center">
