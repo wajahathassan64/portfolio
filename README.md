@@ -101,17 +101,17 @@ Revizer is a Financial Management module for an ERP system, designed to streamli
 
 <p align="center">
   <img 
-    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/rv1.webp"
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/rv1.png"
     width="230" 
     title="Reports"
     >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img
-    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/rv2.webp" 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/rv2.png" 
     width="230"
     title="Transactions"
     >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img 
-    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/rv3.webp" 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/rv3.png" 
     width="230"
     title="Analytics"
     >
