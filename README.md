@@ -109,7 +109,7 @@ Security is a top priority, with two-factor authentication and role-based access
 ## Contact Info:
 
 - Email: wajahathassan64@gmail.com
-- LinkedIn: [Shoaib Akhtar](https://www.linkedin.com/in/wajahat-hassan-ios/)
+- LinkedIn: [Wajahat Hassan](https://www.linkedin.com/in/wajahat-hassan-ios/)
 - Whats App: [Phone](https://api.whatsapp.com/send?phone=+923101015199)
 - Scan QR Code
 
