@@ -105,3 +105,15 @@ Security is a top priority, with two-factor authentication and role-based access
 
 ### Technologies
 `Swift` `MVVM (Model View View-Model)` `Coordinators` `RxSwift` `Modular architecture` `EID Scanner`
+
+## Contact Info:
+
+- Email: wajahathassan64@gmail.com
+- LinkedIn: [Shoaib Akhtar](https://www.linkedin.com/in/wajahat-hassan-ios/)
+- Whats App: [Phone](https://api.whatsapp.com/send?phone=+923101015199)
+- Scan QR Code
+
+<p align="center">
+<img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/qr-code.png" width="230"  title="What's App QR Code">
+</p>
+
