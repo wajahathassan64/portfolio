@@ -21,15 +21,21 @@ SadaPay offers a seamless digital wallet and Mastercard virtual debit card exper
     >
 </p>
 
-### Contributions
-- At SadaPay, I built key features such as the **Card Ordering process**, designed and developed the **Transaction History**, and transformed simple Transaction Details into **dynamic ones**. This enhancement not only helped the **Card Squad** but also made life easier for other squads. The **Card Ordering feature generated significant revenue** for SadaPay. Additionally, I **customized and optimized the main application dashboard** to display Card tiles and Transaction details, along with other widgets.
-- Built a **high-quality product with 97% code coverage** via unit testing and **100% feature coverage** through UI testing, using **extreme programming practices** like **TDD**, **Trunk-Based Development**, and **Ping Pong Programming**.
-- Created a **micro frontend app for testing the feature module**, reducing the feature testing time by **35%**.
-- **Automated iOS app CI/CD workflows** with **GitHub Actions and Bitrise**, improving feature delivery time by **20%**.
-- Introduced a **common module with Kotlin Multiplatform for analytics events**, reducing discrepancies between iOS and Android by **95%**.
-- Implemented **MVVM modular architecture** for an iOS project, reducing release friction, enabling **independent squad work**, and ensuring **pipeline stability**.
-- Implemented **UI test structure using SBUITestTunnel**, reducing **QA dependency by 90%** and accelerating the application delivery process by **75%**.
-- Collaborated with the team to **customize the OpenAPI generator**, streamlining **API contracts across platforms** and eliminating **100% of discrepancies**, which significantly **improved product quality**.
+### Role:
+- **Developed key features**: Built the Card Ordering process, designed and developed Transaction History, and improved Transaction Details.
+- **Collaborated across squads**: Worked with the Card Squad and supported other teams.
+- **Customized and optimized dashboard**: Enhanced the main application dashboard to display card tiles, transaction details, and other widgets.
+- **Automated workflows and testing**: Automated iOS app CI/CD workflows, introduced analytics event tracking, implemented test structures, and collaborated on streamlining API contracts.
+- **Employed extreme programming practices**: Used TDD, Trunk-Based Development, and Ping Pong Programming.
+- **Implemented modular architecture**: Applied MVVM modular architecture to the iOS project for independent work and pipeline stability.
+
+### Outcome:
+- **Increased revenue**: The Card Ordering feature generated significant revenue for SadaPay.
+- **Improved product quality**: Achieved 97% code coverage via unit testing, 100% feature coverage through UI testing, and reduced discrepancies between iOS and Android by 95%.
+- **Faster feature delivery**: Reduced feature testing time by 35% with a micro frontend app and improved feature delivery time by 20% with CI/CD workflow automation.
+- **Enhanced application delivery**: Reduced QA dependency by 90% and accelerated delivery process by 75% with a structured UI test implementation.
+- **Higher product quality and consistency**: Streamlined API contracts, eliminating 100% of discrepancies, leading to improved product quality.
+- **Improved release process**: Modular architecture reduced release friction and enabled squads to work independently.
 
 ### Technologies
 `eXtreme Programming` `Test-Driven Development` `Ping Pong Programming` `Mobing` `Continuous Integration (CI)` `Continuous Delivery (CD)` `Unit Testing` `UI Testing` `Swift` `MVVM (Model View View-Model)` `Github Actions` `Bitrise` `Modular architecture` `Kotling Multiplatform (KMM)`
