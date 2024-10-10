@@ -96,6 +96,27 @@ Security is a top priority, with two-factor authentication and role-based access
     >
 </p>
 
+# [Revizer]
+Revizer is a Financial Management module for an ERP system, designed to streamline financial operations and enhance decision-making for businesses. This module provides real-time insights into financial transactions, supports budget management, tracks expenses, and generates financial reports, ensuring accurate and transparent financial oversight. By integrating various financial tools such as accounts payable, accounts receivable, and general ledger management, the module simplifies complex financial processes, improving efficiency and enabling businesses to maintain compliance with regulatory requirements. The project focused on user-friendly interfaces and robust data security measures.
+
+<p align="center">
+  <img 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/rv1.webp"
+    width="230" 
+    title="Reports"
+    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/rv2.webp" 
+    width="230"
+    title="Transactions"
+    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img 
+    src="https://github.com/wajahathassan64/portfolio/blob/main/assets/rv3.webp" 
+    width="230"
+    title="Analytics"
+    >
+</p>
+
 ### Contributions
 - Led the development of a business banking app with **no minimum balance** account creation.
 - Built **modular MVVM-C architecture** from the ground up, improving scalability and team efficiency.
