@@ -1,7 +1,7 @@
 Experienced Senior iOS Developer with 7+ years of expertise across the UK, UAE, and Pakistan, delivering high-quality mobile solutions in Swift, Objective-C, and RxSwift. Skilled in MVVM-C and VIPER architectures, with a deep commitment to clean, scalable code following SOLID principles. Adept at Test-Driven Development (TDD), performance optimization, and API integration, consistently delivering user-centric iOS applications. Proven success in agile environments, leading projects from concept to deployment with a focus on quality and maintainability.
 
 # [SadaPay: Money made simple](https://apps.apple.com/pk/app/sadapay-money-made-simple/id1543848524)
-SadaPay offers a seamless digital wallet and Mastercard virtual debit card experience, enabling users to manage money confidently without hidden fees. The application allows users to spend, send, and request payments with zero fees, and use their SadaPay card internationally both online and in-person with the lowest foreign exchange rates. Integrated with Raast, SadaPay facilitates fast, fee-free transactions using an account number or IBAN. Designed with freelancers in mind, the SadaBiz account enables Pakistani freelancers to receive international payments up to 900,000 PKR per month at the best exchange rates, with the option to retain earnings in USD. Users can transfer funds instantly without SMS or email OTPs, and pay over 900 billers, including utilities and phone networks, seamlessly. Security is paramount, with biometric access, encryption, and numberless cards ensuring user data and funds are safe. SadaPay also offers 24/7 in-app live chat support available in English, Urdu, and Emoji, along with easy account control options.
+SadaPay offers a seamless digital wallet and Mastercard virtual debit card experience, enabling users to manage money confidently without hidden fees. The application allows users to spend, send, and request payments with zero fees, and use their SadaPay card internationally both online and in-person with the lowest foreign exchange rates. Integrated with Raast, SadaPay facilitates fast, fee-free transactions using an account number or IBAN. Designed with freelancers in mind, the SadaBiz account enables Pakistani freelancers to receive international payments of up to 900,000 PKR per month at the best exchange rates, with the option to retain earnings in USD. Users can transfer funds instantly without SMS or email OTPs, and pay over 900 billers, including utilities and phone networks, seamlessly. Security is paramount, with biometric access, encryption, and numberless cards ensuring user data and funds are safe. SadaPay also offers 24/7 in-app live chat support available in English, Urdu, and Emoji, along with easy account control options.
 
 <p align="center">
   <img 
@@ -72,7 +72,7 @@ YAP redefines digital banking, offering a seamless and feature-rich experience. 
 `Swift` `MVVM (Model View View-Model)` `RxSwift` `Modular architecture` `Core ML` `Machine Learning`
 
 # [EDB Business Banking](https://apps.apple.com/us/app/edb-business-banking/id1583562661)
-EDB Business Banking application is designed to cater to the financial needs of businesses, offering a comprehensive suite of features that streamline banking operations. With over multi million users, the app is trusted by businesses of various sizes to manage their financial transactions efficiently. It allows users to view and manage multiple business accounts, monitor transaction history, and oversee sub-accounts for detailed financial oversight.
+EDB Business Banking application is designed to cater to businesses' financial needs, offering a comprehensive suite of features that streamline banking operations. With over multi million users, the app is trusted by businesses of various sizes to manage their financial transactions efficiently. It allows users to view and manage multiple business accounts, monitor transaction history, and oversee sub-accounts for detailed financial oversight.
 
 The app supports local and international payments, enabling seamless fund transfers between business accounts. Additionally, it offers robust expense tracking tools, allowing businesses to generate detailed financial reports and categorize expenses. These features help businesses optimize cash management and working capital, ensuring smooth daily operations.
 
@@ -96,8 +96,18 @@ Security is a top priority, with two-factor authentication and role-based access
     >
 </p>
 
+### Contributions
+- Led the development of a business banking app with **no minimum balance** account creation.
+- Built **modular MVVM-C architecture** from the ground up, improving scalability and team efficiency.
+- Integrated **Promon Shielding SDK** to enhance app security.
+- Implemented **local transfers, loan management**, and **EID scanning** for seamless onboarding.
+- Added **ATM/CDM map support** and integrated **Core Data** for offline access.
+
+### Technologies
+`Swift` `MVVM (Model View View-Model)` `Coordinators` `RxSwift` `Modular architecture` `EID Scanner`
+
 # Revizer
-Revizer is a Financial Management module for an ERP system, designed to streamline financial operations and enhance decision-making for businesses. This module provides real-time insights into financial transactions, supports budget management, tracks expenses, and generates financial reports, ensuring accurate and transparent financial oversight. By integrating various financial tools such as accounts payable, accounts receivable, and general ledger management, the module simplifies complex financial processes, improving efficiency and enabling businesses to maintain compliance with regulatory requirements. The project focused on user-friendly interfaces and robust data security measures.
+Revizer is a Financial Management module for an ERP system, designed to streamline financial operations and enhance business decision-making. This module provides real-time insights into financial transactions, supports budget management, tracks expenses, and generates financial reports, ensuring accurate and transparent financial oversight. By integrating various financial tools such as accounts payable, accounts receivable, and general ledger management, the module simplifies complex financial processes, improving efficiency and enabling businesses to maintain compliance with regulatory requirements. The project focused on user-friendly interfaces and robust data security measures.
 
 <p align="center">
   <img 
@@ -117,21 +127,14 @@ Revizer is a Financial Management module for an ERP system, designed to streamli
     >
 </p>
 
-### Contributions
-- Led the development of a business banking app with **no minimum balance** account creation.
-- Built **modular MVVM-C architecture** from the ground up, improving scalability and team efficiency.
-- Integrated **Promon Shielding SDK** to enhance app security.
-- Implemented **local transfers, loan management**, and **EID scanning** for seamless onboarding.
-- Added **ATM/CDM map support** and integrated **Core Data** for offline access.
-
 ### Technologies
-`Swift` `MVVM (Model View View-Model)` `Coordinators` `RxSwift` `Modular architecture` `EID Scanner`
+`Swift` `MVC (Model View Controller)`
 
 ## Contact Info:
 
 - Email: wajahathassan64@gmail.com
-- LinkedIn: [Wajahat Hassan](https://www.linkedin.com/in/wajahat-hassan-ios/)
-- Whats App: [Phone](https://api.whatsapp.com/send?phone=+923101015199)
+- LinkedIn [Wajahat Hassan](https://www.linkedin.com/in/wajahat-hassan-ios/)
+- What's App: [Phone](https://api.whatsapp.com/send?phone=+923101015199)
 - Scan QR Code
 
 <p align="center">
