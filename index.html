@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wajahat Hassan — Senior iOS Engineer · Indie Maker</title>
+  <meta name="description" content="Senior iOS engineer with 8+ years shipping fintech, banking, and consumer apps for millions of users. Indie maker of SpendMind." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:title" content="Wajahat Hassan — Senior iOS Engineer · Indie Maker" />
+  <meta property="og:description" content="Senior iOS engineer with 8+ years shipping fintech, banking, and consumer apps for millions of users." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --border: #ececec;
+      --text: #0a0a0a;
+      --muted: #6b6b6b;
+      --soft: #9a9a9a;
+      --accent: #0a0a0a;
+      --chip-bg: #f3f3f1;
+      --chip-text: #333;
+      --radius: 14px;
+      --radius-lg: 22px;
+      --shadow-sm: 0 1px 2px rgba(10,10,10,0.04);
+      --shadow-md: 0 6px 24px rgba(10,10,10,0.06);
+      --max: 1080px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0a0a0a;
+        --surface: #131313;
+        --border: #1f1f1f;
+        --text: #f5f5f4;
+        --muted: #a1a1aa;
+        --soft: #6b6b6b;
+        --accent: #f5f5f4;
+        --chip-bg: #1a1a1a;
+        --chip-text: #d4d4d4;
+        --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+        --shadow-md: 0 6px 24px rgba(0,0,0,0.35);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: inherit; text-decoration: none; transition: opacity .15s ease; }
+    a:hover { opacity: .65; }
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    .brand { font-weight: 700; letter-spacing: -0.01em; }
+    .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); opacity: 1; }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+
+    /* HERO */
+    header.hero { padding: 96px 0 64px; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 18px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    h1 {
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      margin: 0 0 20px;
+    }
+    .lede {
+      font-size: clamp(17px, 2vw, 19px);
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 0 32px;
+    }
+    .lede strong { color: var(--text); font-weight: 600; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); border-color: var(--text); opacity: 1; }
+    .btn-primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+    .btn-primary:hover { opacity: 1; transform: translateY(-1px); }
+
+    /* SECTION */
+    section { padding: 64px 0; }
+    .section-head { margin-bottom: 40px; }
+    .section-eyebrow {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin: 0 0 12px;
+    }
+    .section-sub { color: var(--muted); max-width: 640px; margin: 0; }
+
+    /* CHIPS */
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+    .chip {
+      display: inline-block;
+      padding: 5px 10px;
+      background: var(--chip-bg);
+      color: var(--chip-text);
+      border-radius: 6px;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 500;
+    }
+
+    /* PROJECT CARD */
+    .project {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+    .project:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .project-head {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+    .project-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      flex-shrink: 0;
+      background-color: var(--chip-bg);
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .project-icon-emoji {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #f5f5f4, #e7e5e4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      .project-icon-emoji { background: linear-gradient(135deg, #1c1c1c, #262626); }
+    }
+    .project-title-wrap { flex: 1; min-width: 0; }
+    .project-meta {
+      font-size: 12px;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .project-title {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 4px;
+    }
+    .project-role { color: var(--muted); font-size: 14px; margin: 0; }
+    .project-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--chip-bg);
+      color: var(--chip-text);
+      margin-left: auto;
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+    .project-tag.live::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #16a34a;
+      box-shadow: 0 0 0 3px rgba(22,163,74,0.18);
+    }
+    .project-desc { color: var(--muted); margin: 0 0 22px; font-size: 15px; }
+    .project ul {
+      margin: 0 0 18px;
+      padding-left: 18px;
+      color: var(--text);
+      font-size: 15px;
+    }
+    .project ul li { margin-bottom: 8px; }
+    .project ul li strong { font-weight: 600; }
+    .project-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .project-links a {
+      color: var(--muted);
+      border-bottom: 1px solid transparent;
+      transition: color .15s ease, border-color .15s ease;
+    }
+    .project-links a:hover { color: var(--text); border-bottom-color: var(--text); opacity: 1; }
+    .project-links a::after { content: " ↗"; font-size: 11px; }
+
+    /* SCREENSHOTS */
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px 0 24px;
+    }
+    .shots img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+    .shots-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: var(--chip-bg);
+      border-radius: 12px;
+      color: var(--soft);
+      font-size: 13px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      margin: 20px 0 24px;
+      border: 1px dashed var(--border);
+    }
+    @media (max-width: 640px) {
+      .shots { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .project-head { gap: 16px; }
+      .project { padding: 24px; }
+      .project-icon, .project-icon-emoji { width: 56px; height: 56px; font-size: 28px; }
+      .project-title { font-size: 20px; }
+    }
+
+    /* OUTCOMES */
+    .outcomes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin: 18px 0 6px;
+    }
+    .outcome {
+      padding: 16px;
+      background: var(--chip-bg);
+      border-radius: 10px;
+    }
+    .outcome-num {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .outcome-label {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      transition: border-color .15s ease, transform .15s ease;
+    }
+    .contact-card:hover { border-color: var(--text); transform: translateY(-2px); opacity: 1; }
+    .contact-label {
+      font-size: 12px;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .contact-value {
+      font-weight: 600;
+      font-size: 15px;
+      word-break: break-word;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 0 60px;
+      text-align: center;
+      color: var(--soft);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">Wajahat Hassan</div>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="./assets/resume.pdf">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <header class="hero">
+      <span class="eyebrow">→ Senior iOS Engineer · Indie Maker · Karachi → Worldwide</span>
+      <h1>Hi, I'm Wajahat.<br/>I build mobile products people rely&nbsp;on.</h1>
+      <p class="lede">
+        8+ years shipping iOS apps across <strong>fintech</strong>, <strong>digital banking</strong>, and <strong>consumer</strong> products — used by <strong>millions</strong> of customers in the UK, UAE, and Pakistan. Currently building <strong>Bazaar</strong> (full-stack iOS + Android + backend) and shipping my own indie app, <strong>SpendMind</strong>, as a solo founder.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">View projects →</a>
+        <a class="btn" href="mailto:wajahathassan64@gmail.com">Get in touch</a>
+        <a class="btn" href="./assets/resume.pdf">Resume (PDF)</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="section-head">
+        <div class="section-eyebrow">01 · About</div>
+        <h2 class="section-title">A senior iOS engineer who ships.</h2>
+        <p class="section-sub">I've led iOS teams at SadaPay, YAP, and EDB Business Banking — building apps that scaled to over a million users and millions of monthly transactions. At Bazaar, I now ship full-stack: iOS, Android, and backend.</p>
+      </div>
+      <div class="chips">
+        <span class="chip">Swift</span>
+        <span class="chip">SwiftUI</span>
+        <span class="chip">Objective-C</span>
+        <span class="chip">RxSwift</span>
+        <span class="chip">Combine</span>
+        <span class="chip">Kotlin</span>
+        <span class="chip">Jetpack Compose</span>
+        <span class="chip">MVVM-C</span>
+        <span class="chip">VIPER</span>
+        <span class="chip">Modular Architecture</span>
+        <span class="chip">TDD</span>
+        <span class="chip">CI/CD</span>
+        <span class="chip">GitHub Actions</span>
+        <span class="chip">Bitrise</span>
+        <span class="chip">Core ML</span>
+        <span class="chip">CloudKit</span>
+        <span class="chip">StoreKit 2</span>
+        <span class="chip">WidgetKit</span>
+        <span class="chip">VisionKit</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-head">
+        <div class="section-eyebrow">02 · Featured Work</div>
+        <h2 class="section-title">Selected projects.</h2>
+        <p class="section-sub">From a one-million-user banking app I led from scratch to a solo indie product on the App Store.</p>
+      </div>
+
+      <!-- SpendMind -->
+      <article class="project">
+        <div class="project-head">
+          <img class="project-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/23/0a/04/230a04c1-2554-3e00-a370-239814601b53/AppIcon-0-1x_U007ephone-0-1-0-85-220-0.png/512x512bb.jpg" alt="SpendMind icon" />
+          <div class="project-title-wrap">
+            <div class="project-meta">2026 · Indie · Solo build</div>
+            <h3 class="project-title">SpendMind — AI Expense Tracker</h3>
+            <p class="project-role">Founder, designer, and sole engineer</p>
+          </div>
+          <span class="project-tag live">Live on App Store</span>
+        </div>
+
+        <p class="project-desc">
+          A voice-first, AI-powered expense tracker. Speak naturally — <em>"Spent $12 on coffee today"</em> — and AI extracts the amount, category, and date in seconds. 50+ languages, 50+ currencies, privacy-first, with iCloud sync across iPhone, iPad, and Mac.
+        </p>
+
+        <div class="shots-placeholder">
+          Screenshots: drop 3 images into <code>assets/spendmind1.png / 2.png / 3.png</code> and uncomment in README.
+        </div>
+
+        <ul>
+          <li><strong>Built end-to-end as a one-person team</strong> — design, iOS engineering, AI pipeline, App Store launch.</li>
+          <li><strong>Voice-to-expense pipeline</strong> using Apple Speech + LLM parsing — extracts amount, category, and date across 50+ languages.</li>
+          <li><strong>AI Chat Assistant</strong> with continuous voice conversation — ask "How much did I spend on food last month?" and get a spoken answer back.</li>
+          <li><strong>On-device Receipt Scanner</strong> with VisionKit OCR, multi-page support, and auto-capture — no internet required, no data leaves the device.</li>
+          <li><strong>iCloud Sync via CloudKit</strong> with runtime activation and seamless multi-device sync.</li>
+          <li><strong>Home Screen Widget</strong> (WidgetKit) and <strong>StoreKit 2 subscriptions</strong> ($9.99/mo · $69.99/yr) with restore-purchase and entitlement enforcement.</li>
+          <li>Localized onboarding, daily reminder notifications, CSV export, recurring expenses, <strong>zero-data-collection</strong> privacy posture.</li>
+        </ul>
+
+        <div class="outcomes">
+          <div class="outcome"><div class="outcome-num">50+</div><div class="outcome-label">Languages supported</div></div>
+          <div class="outcome"><div class="outcome-num">50+</div><div class="outcome-label">Currencies</div></div>
+          <div class="outcome"><div class="outcome-num">0</div><div class="outcome-label">Data points collected</div></div>
+          <div class="outcome"><div class="outcome-num">1</div><div class="outcome-label">Team size — me</div></div>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Swift</span>
+          <span class="chip">SwiftUI</span>
+          <span class="chip">Swift Concurrency</span>
+          <span class="chip">CloudKit</span>
+          <span class="chip">VisionKit</span>
+          <span class="chip">Apple Speech</span>
+          <span class="chip">StoreKit 2</span>
+          <span class="chip">WidgetKit</span>
+          <span class="chip">LLM APIs</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://apps.apple.com/us/app/spendmind-ai-expense-tracker/id6754249390">App Store</a>
+          <a href="https://www.spendmind.co">spendmind.co</a>
+          <a href="https://www.spendmind.co/privacy-policy">Privacy Policy</a>
+        </div>
+      </article>
+
+      <!-- Bazaar -->
+      <article class="project">
+        <div class="project-head">
+          <img class="project-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3d/e0/38/3de0380a-a20f-9a37-6021-ce2938fedcff/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.jpeg/512x512bb.jpg" alt="Bazaar icon" />
+          <div class="project-title-wrap">
+            <div class="project-meta">2025–Now · Bazaar Technologies · Pakistan</div>
+            <h3 class="project-title">Bazaar — Grocery Delivery</h3>
+            <p class="project-role">Senior iOS Engineer → full-stack contributor (iOS · Android · Backend)</p>
+          </div>
+          <span class="project-tag">★ 4.5</span>
+        </div>
+
+        <p class="project-desc">
+          Pakistan's leading grocery delivery app. 5,000+ products, next-day delivery to households and businesses across Karachi, Lahore, Islamabad, and beyond. I was hired as iOS lead and have since expanded into Android and backend work.
+        </p>
+
+        <div class="shots-placeholder">
+          Screenshots: drop 3 images into <code>assets/bazaar1.png / 2.png / 3.png</code> and uncomment in README.
+        </div>
+
+        <ul>
+          <li><strong>iOS app build</strong> — home, search, cart, checkout, order tracking, payments, loyalty, wallet, multi-address management.</li>
+          <li><strong>Payments</strong> — integrated JazzCash and secure card-add via in-app web view; session tracking and HTTPS hardening.</li>
+          <li><strong>Loyalty & rewards</strong> — card link/de-link flow, OTP banner, points redemption, rewards list.</li>
+          <li><strong>Cart & checkout</strong> — multi-address, delivery scheduling with on-time guarantee, voucher engine (free-delivery vouchers, percentage caps), order rating with App Store review integration.</li>
+          <li><strong>Discovery</strong> — product tag filters, brand carousels, "People also bought" suggestions, saved shopping lists, recipe details with ingredients + how-to-make tabs, seasonal campaigns (Lucky Draw, Eidi, Ramzan).</li>
+          <li><strong>Android contributions</strong> — pitched in on Jetpack Compose features to keep platform parity.</li>
+          <li><strong>Backend contributions</strong> — extended services for cart-by-ID, sponsored content tagging, voucher logic, device fingerprinting.</li>
+          <li><strong>Reliability</strong> — Braze analytics wiring, crash fixes (favorites, cart deeplinks), v2.0 release with notification hub.</li>
+        </ul>
+
+        <div class="outcomes">
+          <div class="outcome"><div class="outcome-num">4.5★</div><div class="outcome-label">App Store rating</div></div>
+          <div class="outcome"><div class="outcome-num">5,000+</div><div class="outcome-label">SKUs across 30+ categories</div></div>
+          <div class="outcome"><div class="outcome-num">3</div><div class="outcome-label">Platforms shipped (iOS · Android · backend)</div></div>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Swift</span>
+          <span class="chip">SwiftUI</span>
+          <span class="chip">UIKit</span>
+          <span class="chip">Kotlin</span>
+          <span class="chip">Jetpack Compose</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">JazzCash</span>
+          <span class="chip">Braze</span>
+          <span class="chip">Google Places</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://apps.apple.com/us/app/bazaar-grocery-delivery/id6741764524">App Store</a>
+          <a href="https://www.bazaarapp.com">bazaarapp.com</a>
+        </div>
+      </article>
+
+      <!-- SadaPay -->
+      <article class="project">
+        <div class="project-head">
+          <div class="project-icon-emoji">💸</div>
+          <div class="project-title-wrap">
+            <div class="project-meta">SadaPay · Pakistan</div>
+            <h3 class="project-title">SadaPay — Money Made Simple</h3>
+            <p class="project-role">Senior iOS Engineer · Card Squad</p>
+          </div>
+        </div>
+
+        <p class="project-desc">
+          Fee-free digital wallet and Mastercard virtual debit card. SadaBiz enables Pakistani freelancers to receive international payments up to PKR 900K/month at the best FX rates.
+        </p>
+
+        <div class="shots">
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/sadapay1.PNG" alt="SadaPay dashboard" />
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/sadapay2.PNG" alt="SadaPay business dashboard" />
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/sadapay3.PNG" alt="SadaPay bills" />
+        </div>
+
+        <ul>
+          <li>Built <strong>Card Ordering</strong> end-to-end — a top revenue-generating feature.</li>
+          <li>Designed and shipped <strong>Transaction History</strong> and improved <strong>Transaction Details</strong>.</li>
+          <li>Automated <strong>iOS CI/CD</strong> with GitHub Actions + Bitrise; standardised analytics events; streamlined iOS↔Android API contracts.</li>
+          <li>Migrated to a <strong>modular MVVM architecture</strong> to unblock parallel squad development.</li>
+          <li>Drove <strong>extreme programming practices</strong> — TDD, Trunk-Based Development, Ping Pong Programming, Mobbing.</li>
+        </ul>
+
+        <div class="outcomes">
+          <div class="outcome"><div class="outcome-num">97%</div><div class="outcome-label">Unit test coverage</div></div>
+          <div class="outcome"><div class="outcome-num">100%</div><div class="outcome-label">UI test feature coverage</div></div>
+          <div class="outcome"><div class="outcome-num">35%</div><div class="outcome-label">Faster feature testing</div></div>
+          <div class="outcome"><div class="outcome-num">90%</div><div class="outcome-label">Less QA dependency</div></div>
+          <div class="outcome"><div class="outcome-num">95%</div><div class="outcome-label">Fewer iOS↔Android discrepancies</div></div>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Swift</span>
+          <span class="chip">MVVM</span>
+          <span class="chip">Modular</span>
+          <span class="chip">TDD</span>
+          <span class="chip">XCUITest</span>
+          <span class="chip">GitHub Actions</span>
+          <span class="chip">Bitrise</span>
+          <span class="chip">KMM</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://apps.apple.com/pk/app/sadapay-money-made-simple/id1543848524">App Store</a>
+        </div>
+      </article>
+
+      <!-- YAP -->
+      <article class="project">
+        <div class="project-head">
+          <div class="project-icon-emoji">🏦</div>
+          <div class="project-title-wrap">
+            <div class="project-meta">YAP · UAE</div>
+            <h3 class="project-title">YAP — Your Digital Banking App</h3>
+            <p class="project-role">Lead iOS Engineer · Founding mobile engineer</p>
+          </div>
+        </div>
+
+        <p class="project-desc">
+          Full-stack digital banking in the UAE — 30-second signup, multi-currency Mastercard debit, virtual cards, bill splitting, QR payments, and rich spending analytics.
+        </p>
+
+        <div class="shots">
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/yap1.webp" alt="YAP card" />
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/yap3.webp" alt="YAP home" />
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/yap2.webp" alt="YAP analytics" />
+        </div>
+
+        <ul>
+          <li><strong>Led the iOS app</strong> from inception — reached <strong>1M+ customers</strong> in year one, processing millions of transactions monthly.</li>
+          <li>Architected ground-up with <strong>modular MVVM-C</strong>, dependency containers, and <strong>RxSwift</strong>.</li>
+          <li>Built an <strong>in-house KYC SDK</strong> using iOS Core ML + Amazon ML — eliminating third-party fees.</li>
+          <li>Integrated <strong>Promon Shielding SDK</strong> for runtime security and tamper detection.</li>
+          <li>Led the <strong>live support team</strong> — cleared a 500-ticket backlog in one week.</li>
+        </ul>
+
+        <div class="outcomes">
+          <div class="outcome"><div class="outcome-num">1M+</div><div class="outcome-label">Customers in year one</div></div>
+          <div class="outcome"><div class="outcome-num">Millions</div><div class="outcome-label">Monthly transactions</div></div>
+          <div class="outcome"><div class="outcome-num">500</div><div class="outcome-label">Support tickets cleared in 1 week</div></div>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Swift</span>
+          <span class="chip">MVVM-C</span>
+          <span class="chip">RxSwift</span>
+          <span class="chip">Modular</span>
+          <span class="chip">Core ML</span>
+          <span class="chip">Amazon ML</span>
+          <span class="chip">Promon</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://apps.apple.com/us/app/yap-your-digital-banking-app/id1498302242">App Store</a>
+        </div>
+      </article>
+
+      <!-- EDB -->
+      <article class="project">
+        <div class="project-head">
+          <div class="project-icon-emoji">🏢</div>
+          <div class="project-title-wrap">
+            <div class="project-meta">EDB · UAE</div>
+            <h3 class="project-title">EDB Business Banking</h3>
+            <p class="project-role">Senior iOS Engineer</p>
+          </div>
+        </div>
+
+        <p class="project-desc">
+          Business banking app for multi-million businesses — multi-account management, sub-accounts, local & international transfers, expense tracking, and role-based access for teams.
+        </p>
+
+        <div class="shots">
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/edb1.webp" alt="EDB card" />
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/edb2.webp" alt="EDB analytics" />
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/edb3.webp" alt="EDB home" />
+        </div>
+
+        <ul>
+          <li>Led iOS build of a business banking app with <strong>no minimum balance</strong> account creation.</li>
+          <li>Architected <strong>modular MVVM-C</strong> for scalable, parallel team development.</li>
+          <li>Integrated <strong>Promon Shielding SDK</strong> to harden app security.</li>
+          <li>Shipped <strong>local transfers</strong>, <strong>loan management</strong>, <strong>EID scanning</strong>, and <strong>ATM/CDM map</strong>.</li>
+          <li>Integrated <strong>Core Data</strong> for offline access to accounts and transaction history.</li>
+        </ul>
+
+        <div class="chips">
+          <span class="chip">Swift</span>
+          <span class="chip">MVVM-C</span>
+          <span class="chip">Coordinators</span>
+          <span class="chip">RxSwift</span>
+          <span class="chip">Modular</span>
+          <span class="chip">Core Data</span>
+          <span class="chip">EID Scanner</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://apps.apple.com/us/app/edb-business-banking/id1583562661">App Store</a>
+        </div>
+      </article>
+
+      <!-- Revizer -->
+      <article class="project">
+        <div class="project-head">
+          <div class="project-icon-emoji">📊</div>
+          <div class="project-title-wrap">
+            <div class="project-meta">Revizer · ERP</div>
+            <h3 class="project-title">Revizer — Financial Management</h3>
+            <p class="project-role">iOS Engineer</p>
+          </div>
+        </div>
+
+        <p class="project-desc">
+          ERP financial management module — real-time insights, budgeting, expense tracking, AP/AR, GL management, and compliance-ready reporting.
+        </p>
+
+        <div class="shots">
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/rv1.png" alt="Revizer reports" />
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/rv2.png" alt="Revizer transactions" />
+          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/rv3.png" alt="Revizer analytics" />
+        </div>
+
+        <div class="chips">
+          <span class="chip">Swift</span>
+          <span class="chip">MVC</span>
+        </div>
+      </article>
+
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <div class="section-eyebrow">03 · Contact</div>
+        <h2 class="section-title">Let's build something together.</h2>
+        <p class="section-sub">Open to senior iOS / mobile engineering roles, contract work, and indie collaborations. Based in Karachi — remote-friendly across timezones.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:wajahathassan64@gmail.com">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">wajahathassan64@gmail.com</div>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/wajahat-hassan-ios/">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">in/wajahat-hassan-ios</div>
+        </a>
+        <a class="contact-card" href="https://api.whatsapp.com/send?phone=+923101015199">
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value">+92 310 1015199</div>
+        </a>
+        <a class="contact-card" href="https://www.spendmind.co">
+          <div class="contact-label">Indie product</div>
+          <div class="contact-value">spendmind.co</div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Wajahat Hassan. Built with care, hosted on GitHub Pages.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
