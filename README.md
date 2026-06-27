@@ -128,7 +128,7 @@ SadaPay is a fee-free digital wallet and Mastercard virtual debit card, built fo
 
 ---
 
-### [YAP — Your Digital Banking App](https://apps.apple.com/us/app/yap-your-digital-banking-app/id1498302242)
+### [YAP — Your Digital Banking App](https://apps.apple.com/pk/app/yap-pakistan/id6743106523)
 **Lead iOS Engineer — UAE**
 
 YAP is a full-stack digital banking app in the UAE — 30-second signup, Mastercard debit, multi-currency, virtual cards, bill splitting, QR payments, and spending analytics.
