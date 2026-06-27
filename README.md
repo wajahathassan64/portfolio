@@ -150,7 +150,7 @@ YAP is a full-stack digital banking app in the UAE — 30-second signup, Masterc
 
 ---
 
-### [EDB Business Banking](https://apps.apple.com/us/app/edb-business-banking/id1583562661)
+### [EDB Business Banking](https://apps.apple.com/eg/app/edb-360-business-banking-app/id6689504517)
 **Senior iOS Engineer — UAE**
 
 EDB's business banking app, serving multi-million businesses with multi-account management, transaction history, sub-accounts, local/international transfers, expense tracking, and role-based access.
