@@ -35,16 +35,15 @@ In parallel, I ship my own indie product, **[SpendMind](https://www.spendmind.co
 SpendMind is a voice-first, AI-powered expense tracker. Users speak naturally — *"Spent $12 on coffee today"* — and AI instantly extracts the amount, category, and date. Designed for busy professionals, freelancers, and anyone who wants to log expenses in seconds, not minutes.
 
 <p align="center">
-  <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/23/0a/04/230a04c1-2554-3e00-a370-239814601b53/AppIcon-0-1x_U007ephone-0-1-0-85-220-0.png/512x512bb.jpg" width="120" alt="SpendMind app icon" />
+  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/spendmind1.jpg" width="230" title="Voice-first home dashboard" />
+  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/spendmind2.jpg" width="230" title="AI-categorised onboarding" />
+  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/spendmind3.jpg" width="230" title="Expense analytics" />
 </p>
-
-<!-- Add 3 screenshots here:
 <p align="center">
-  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/spendmind1.png" width="230" />
-  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/spendmind2.png" width="230" />
-  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/spendmind3.png" width="230" />
+  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/spendmind4.jpg" width="230" title="AI chat assistant" />
+  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/spendmind5.jpg" width="230" title="On-device receipt scanner" />
+  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/spendmind6.jpg" width="230" title="Recurring expenses" />
 </p>
--->
 
 **My role — Solo founder & engineer**
 - Designed, built, and shipped SpendMind end-to-end as a one-person team — from product design and onboarding flows to AI parsing, payments, and App Store launch.
