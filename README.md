@@ -70,16 +70,10 @@ SpendMind is a voice-first, AI-powered expense tracker. Users speak naturally �
 Bazaar is Pakistan's leading online grocery delivery app, serving households and businesses across Karachi, Lahore, Islamabad, and more. **5,000+ products** across 30+ categories, next-day delivery, and a 4.5-star rating on the App Store.
 
 <p align="center">
-  <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3d/e0/38/3de0380a-a20f-9a37-6021-ce2938fedcff/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.jpeg/512x512bb.jpg" width="120" alt="Bazaar app icon" />
+  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/bazaar1.jpg" width="230" title="Home & search" />
+  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/bazaar2.jpg" width="230" title="Order delivery" />
+  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/bazaar3.jpg" width="230" title="Product detail" />
 </p>
-
-<!-- Add 3 screenshots here:
-<p align="center">
-  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/bazaar1.png" width="230" />
-  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/bazaar2.png" width="230" />
-  <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/bazaar3.png" width="230" />
-</p>
--->
 
 **My role — Senior iOS Engineer (hired) → Full-stack contributor**
 
