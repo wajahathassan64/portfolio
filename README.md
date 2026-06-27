@@ -2,7 +2,7 @@
 
 <p align="center">
   Senior iOS Engineer · Indie iOS Maker · Full-Stack Contributor<br/>
-  8+ years shipping mobile products across the UK, UAE, and Pakistan.
+  9 years shipping mobile products across Europe, the Middle East, and South Asia.
 </p>
 
 <p align="center">
@@ -17,13 +17,13 @@
 
 ## About
 
-I'm a senior iOS engineer with 8+ years of experience shipping production apps used by **millions** of customers across fintech, digital banking, and consumer products. I've worked with **SadaPay**, **YAP**, **EDB Business Banking**, and now **Bazaar Technologies**, building features that move money, process transactions at scale, and make life simpler.
+I'm a senior iOS engineer with 9 years of experience building scalable, high-performance mobile applications for **fintech**, **digital banking**, and **AI-powered platforms** across Europe, the Middle East, and South Asia. I've worked with **SadaPay**, **YAP**, **EDB Business Banking**, and now **Bazaar Technologies**, building features that move money, process transactions at scale, and make life simpler.
 
-I'm deep in **Swift**, **SwiftUI**, and clean architectures (MVVM, MVVM-C, VIPER), with strong fundamentals in **TDD**, **CI/CD**, modular design, and **RxSwift**. At Bazaar, I've expanded into full-stack — contributing on **Android (Jetpack Compose)** and **backend** services alongside iOS.
+I'm deep in **Swift**, **SwiftUI**, and clean architectures (MVVM, MVVM-C, VIPER), with strong fundamentals in **TDD**, **CI/CD**, modular design, and **Kotlin Multiplatform (KMP)**. At Bazaar, I've expanded into full-stack — contributing on **Android (Jetpack Compose)** and **backend** services alongside iOS.
 
 In parallel, I ship my own indie product, **[SpendMind](https://www.spendmind.co)** — an AI-powered, voice-first expense tracker, built solo and live on the App Store.
 
-**Core stack** · `Swift` `SwiftUI` `Objective-C` `RxSwift` `Combine` `Kotlin` `Jetpack Compose` `MVVM` `MVVM-C` `VIPER` `Modular Architecture` `TDD` `CI/CD` `GitHub Actions` `Bitrise` `Core ML` `CloudKit` `StoreKit 2` `WidgetKit`
+**Core stack** · `Swift` `SwiftUI` `Objective-C` `RxSwift` `Combine` `Kotlin` `Jetpack Compose` `KMP` `MVVM` `MVVM-C` `VIPER` `Modular Architecture` `TDD` `CI/CD` `GitHub Actions` `Bitrise` `Fastlane` `Core ML` `CloudKit` `StoreKit 2` `WidgetKit` `LLM Integration`
 
 ---
 
@@ -47,14 +47,15 @@ SpendMind is a voice-first, AI-powered expense tracker. Users speak naturally �
 
 **My role — Solo founder & engineer**
 - Designed, built, and shipped SpendMind end-to-end as a one-person team — from product design and onboarding flows to AI parsing, payments, and App Store launch.
-- Built a **voice-to-expense pipeline** that captures speech, transcribes it, and uses LLM parsing to extract amount, category, and date with high accuracy across **50+ languages**.
-- Shipped an **AI Chat Assistant** with continuous voice-conversation mode — users can ask "How much did I spend on food last month?" and get a spoken answer back.
-- Built an **on-device Receipt Scanner** using VisionKit / Apple Vision OCR with multi-page document support and auto-capture — no internet required, no data leaves the device.
+- Built a **voice-to-expense pipeline** using SFSpeechRecognizer + OpenAI GPT to extract amount, category, and date from natural language with **90%+ accuracy** across **50+ languages**.
+- Shipped an **AI Chat Assistant** with tool-based expense operations, **on-device Whisper transcription**, and TTS voice output — users can ask "How much did I spend on food last month?" and get a spoken answer back.
+- Built an **on-device Receipt Scanner** using VisionKit / Apple Vision OCR with auto-document detection and batch processing up to 5 images — no internet required, no data leaves the device.
+- Engineered an **LLM-powered bank statement importer** for PDF, CSV, and XLSX with deduplication, confidence gating, and a human review workflow.
 - Implemented **iCloud Sync via CloudKit** with runtime activation, account-state feedback, and seamless multi-device sync (iPhone, iPad, Mac).
 - Built a **Home Screen Widget** with WidgetKit and a **subscription model** with StoreKit 2 (monthly $9.99 / yearly $69.99) with restore-purchase, free-trial logic, and entitlement enforcement.
 - Set up **recurring expenses**, **localized onboarding**, **CSV export**, **daily reminder notifications**, and a **privacy-first architecture** with zero data collection.
 
-**Stack** · `Swift` `SwiftUI` `Swift Concurrency` `CloudKit` `VisionKit` `Apple Speech` `StoreKit 2` `WidgetKit` `Core ML` `AI / LLM APIs`
+**Stack** · `Swift` `SwiftUI` `Swift Concurrency` `CloudKit` `VisionKit` `SFSpeechRecognizer` `Whisper` `OpenAI GPT` `StoreKit 2` `WidgetKit` `Core Data` `Mixpanel` `Firebase Crashlytics`
 
 **Highlights**
 - Live on the **App Store** with paid subscriptions and active users.
@@ -65,7 +66,7 @@ SpendMind is a voice-first, AI-powered expense tracker. Users speak naturally �
 ---
 
 ### [Bazaar — Grocery Delivery](https://apps.apple.com/us/app/bazaar-grocery-delivery/id6741764524)
-**Bazaar Technologies · Senior iOS Engineer with cross-platform & backend contributions**
+**Bazaar Technologies · Senior Software Engineer II · Cross-platform & backend contributions**
 
 Bazaar is Pakistan's leading online grocery delivery app, serving households and businesses across Karachi, Lahore, Islamabad, and more. **5,000+ products** across 30+ categories, next-day delivery, and a 4.5-star rating on the App Store.
 
@@ -75,11 +76,15 @@ Bazaar is Pakistan's leading online grocery delivery app, serving households and
   <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/bazaar3.jpg" width="230" title="Product detail" />
 </p>
 
-**My role — Senior iOS Engineer (hired) → Full-stack contributor**
+**My role — Senior Software Engineer II → Full-stack contributor**
 
-I was hired as a Senior iOS Engineer to build Bazaar's consumer iOS app, and have since expanded into **Android** and **backend** contributions as the team has needed full-stack help shipping features end-to-end.
+Hired as a senior engineer to build Bazaar's consumer iOS app, now expanded into **Android** and **backend** contributions shipping features end-to-end.
 
-- **iOS app development** — built the consumer iOS app from the early stages, including the home, search, cart, checkout, order tracking, payments, loyalty, and wallet flows.
+- **Architecture** — designed a modular navigation framework using **Coordinator Pattern** and Routers, decoupling screen dependencies and enabling production go-live in under 4 months.
+- **KMP integration** — integrated **Kotlin Multiplatform** core logic into iOS, sharing networking, parsing, and business rules across Android and iOS, increasing development velocity by **60%**.
+- **Swift Packages** — published **4 internal Swift Packages** (UI Toolkit, Theme, Extensions, Localization), eliminating cross-app code duplication by **90%** across 3 flagship apps.
+- **SPM migration** — migrated from CocoaPods to Swift Package Manager and standardized XCConfig schemes, reducing build failures by **35%**.
+- **iOS app development** — built the consumer iOS app including home, search, cart, checkout, order tracking, payments, loyalty, and wallet flows.
 - **Payments integration** — integrated **JazzCash** and secure card-add via in-app web view, plus Apple Pay-style flows with session tracking and HTTPS hardening.
 - **Loyalty & rewards** — shipped the loyalty linking/de-linking flow, OTP banner, points redemption, and the rewards list screen.
 - **Cart & checkout** — multi-address management, delivery scheduling with on-time guarantee, voucher/discount engine (including free-delivery vouchers, percentage caps), and order rating with App Store review integration.
@@ -87,9 +92,10 @@ I was hired as a Senior iOS Engineer to build Bazaar's consumer iOS app, and hav
 - **Back-in-stock + favorites** — built the back-in-stock notification flow and favorites carousel with category-aware tracking.
 - **Cross-platform contributions** — pitched in on **Android (Jetpack Compose)** features as the team scaled, keeping parity with iOS.
 - **Backend contributions** — extended **backend services** to support new client features (cart by ID, sponsored content tagging, voucher logic, device fingerprinting for security analytics).
+- **UIKit → SwiftUI** — overhauled UIKit components to SwiftUI, cutting technical debt by **40%**, and optimized CI/CD pipelines improving build times by **30%**.
 - **Stability & analytics** — Braze analytics wiring, crash fixes (favorites, cart deeplinks, in-app updates), performance profiling, and shipping a v2.0 release with multi-address + notification hub.
 
-**Stack** · `Swift` `SwiftUI` `UIKit` `Kotlin` `Jetpack Compose` `REST APIs` `Braze` `JazzCash SDK` `Google Places` `Modular Architecture`
+**Stack** · `Swift` `SwiftUI` `UIKit` `Kotlin` `Jetpack Compose` `KMP` `SPM` `Coordinator Pattern` `REST APIs` `Braze` `JazzCash SDK` `Google Places` `Modular Architecture`
 
 **Highlights**
 - **4.5 ★** on the App Store with **5,000+ SKUs** and growing user base across Karachi, Lahore, and Islamabad.
@@ -99,7 +105,7 @@ I was hired as a Senior iOS Engineer to build Bazaar's consumer iOS app, and hav
 ---
 
 ### [SadaPay — Money Made Simple](https://apps.apple.com/pk/app/sadapay-money-made-simple/id1543848524)
-**Senior iOS Engineer · Card Squad**
+**Senior Software Engineer · Card Squad**
 
 SadaPay is a fee-free digital wallet and Mastercard virtual debit card, built for Pakistani consumers and freelancers. SadaBiz enables freelancers to receive international payments up to 900,000 PKR/month with competitive FX rates.
 
@@ -116,6 +122,9 @@ SadaPay is a fee-free digital wallet and Mastercard virtual debit card, built fo
 - Automated **iOS CI/CD workflows** with GitHub Actions and Bitrise, introduced analytics event tracking, and streamlined API contracts across iOS/Android.
 - Drove **extreme programming practices** on the squad — TDD, Trunk-Based Development, Ping Pong Programming, Mobbing.
 - Migrated the iOS project to a **modular MVVM architecture** to unblock parallel squad development and stabilize the pipeline.
+- Collaborated with **10+ squads** to design a multi-modular iOS codebase, enabling autonomous squad delivery and eliminating cross-team bottlenecks.
+- Built a **KMP analytics library** for unified cross-platform event tracking, and expanded into **backend engineering** with Kotlin, Spring Boot, and Kafka.
+- Automated **API client generation** via OpenAPI specifications, reducing development effort by **40%** and accelerating feature delivery.
 
 **Outcomes**
 - **97% code coverage** via unit testing and **100% feature coverage** via UI testing.
@@ -124,12 +133,12 @@ SadaPay is a fee-free digital wallet and Mastercard virtual debit card, built fo
 - **90%** reduction in QA dependency and **75%** faster delivery with structured UI test automation.
 - **95%** reduction in iOS↔Android discrepancies; **100%** elimination of API contract mismatches.
 
-**Stack** · `Swift` `MVVM` `Modular Architecture` `TDD` `Unit Testing` `UI Testing` `GitHub Actions` `Bitrise` `Kotlin Multiplatform (KMM)`
+**Stack** · `Swift` `MVVM` `Modular Architecture` `TDD` `Unit Testing` `UI Testing` `GitHub Actions` `Bitrise` `Fastlane` `KMP` `Kotlin` `Spring Boot` `Kafka` `OpenAPI`
 
 ---
 
 ### [YAP — Your Digital Banking App](https://apps.apple.com/pk/app/yap-pakistan/id6743106523)
-**Lead iOS Engineer — UAE**
+**Digitify Private Limited · Senior Software Engineer — UAE**
 
 YAP is a full-stack digital banking app in the UAE — 30-second signup, Mastercard debit, multi-currency, virtual cards, bill splitting, QR payments, and spending analytics.
 
@@ -150,8 +159,8 @@ YAP is a full-stack digital banking app in the UAE — 30-second signup, Masterc
 
 ---
 
-### [EDB Business Banking](https://apps.apple.com/eg/app/edb-360-business-banking-app/id6689504517)
-**Senior iOS Engineer — UAE**
+### [EDB 360 Business Banking](https://apps.apple.com/eg/app/edb-360-business-banking-app/id6689504517)
+**Digitify Private Limited · Senior Software Engineer — UAE**
 
 EDB's business banking app, serving multi-million businesses with multi-account management, transaction history, sub-accounts, local/international transfers, expense tracking, and role-based access.
 
@@ -162,10 +171,11 @@ EDB's business banking app, serving multi-million businesses with multi-account 
 </p>
 
 **Key contributions**
-- Led the iOS build of a business-banking app with **no minimum balance** account creation.
+- Led the iOS build of a business-banking app with **no minimum balance** account creation, driving a **30% increase in signups** within 6 months.
 - Architected **modular MVVM-C** from the ground up for scalability and parallel team velocity.
 - Integrated **Promon Shielding SDK** to harden app security.
-- Shipped **local transfers**, **loan management**, **EID scanning** for onboarding, and **ATM/CDM map** support.
+- Implemented **Emirates ID scanning** for automated onboarding, accelerating user onboarding by **40%** and reducing manual verification errors by **95%**.
+- Shipped **local transfers**, **loan management**, and **ATM/CDM map** support.
 - Integrated **Core Data** for robust offline access to accounts and transaction history.
 
 **Stack** · `Swift` `MVVM-C` `Coordinators` `RxSwift` `Modular Architecture` `Core Data` `EID Scanner`

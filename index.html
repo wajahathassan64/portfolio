@@ -383,7 +383,7 @@
       <span class="eyebrow">→ Senior iOS Engineer · Indie Maker · Karachi → Worldwide</span>
       <h1>Hi, I'm Wajahat.<br/>I build mobile products people rely&nbsp;on.</h1>
       <p class="lede">
-        8+ years shipping iOS apps across <strong>fintech</strong>, <strong>digital banking</strong>, and <strong>consumer</strong> products — used by <strong>millions</strong> of customers in the UK, UAE, and Pakistan. Currently building <strong>Bazaar</strong> (full-stack iOS + Android + backend) and shipping my own indie app, <strong>SpendMind</strong>, as a solo founder.
+        9 years building scalable mobile applications across <strong>fintech</strong>, <strong>digital banking</strong>, and <strong>AI-powered platforms</strong> — used by <strong>millions</strong> of customers across Europe, the Middle East, and South Asia. Currently building <strong>Bazaar</strong> (full-stack iOS + Android + backend) and shipping my own indie app, <strong>SpendMind</strong>, as a solo founder.
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#projects">View projects →</a>
@@ -406,6 +406,7 @@
         <span class="chip">Combine</span>
         <span class="chip">Kotlin</span>
         <span class="chip">Jetpack Compose</span>
+        <span class="chip">KMP</span>
         <span class="chip">MVVM-C</span>
         <span class="chip">VIPER</span>
         <span class="chip">Modular Architecture</span>
@@ -413,11 +414,13 @@
         <span class="chip">CI/CD</span>
         <span class="chip">GitHub Actions</span>
         <span class="chip">Bitrise</span>
+        <span class="chip">Fastlane</span>
         <span class="chip">Core ML</span>
         <span class="chip">CloudKit</span>
         <span class="chip">StoreKit 2</span>
         <span class="chip">WidgetKit</span>
         <span class="chip">VisionKit</span>
+        <span class="chip">LLM Integration</span>
       </div>
     </section>
 
@@ -457,9 +460,10 @@
 
         <ul>
           <li><strong>Built end-to-end as a one-person team</strong> — design, iOS engineering, AI pipeline, App Store launch.</li>
-          <li><strong>Voice-to-expense pipeline</strong> using Apple Speech + LLM parsing — extracts amount, category, and date across 50+ languages.</li>
-          <li><strong>AI Chat Assistant</strong> with continuous voice conversation — ask "How much did I spend on food last month?" and get a spoken answer back.</li>
-          <li><strong>On-device Receipt Scanner</strong> with VisionKit OCR, multi-page support, and auto-capture — no internet required, no data leaves the device.</li>
+          <li><strong>Voice-to-expense pipeline</strong> using SFSpeechRecognizer + OpenAI GPT — extracts amount, category, and date with <strong>90%+ accuracy</strong> across 50+ languages.</li>
+          <li><strong>AI Chat Assistant</strong> with tool-based expense operations, <strong>on-device Whisper transcription</strong>, and TTS voice output.</li>
+          <li><strong>On-device Receipt Scanner</strong> with VisionKit OCR, auto-document detection, and batch processing up to 5 images — no internet required.</li>
+          <li><strong>LLM-powered bank statement importer</strong> for PDF, CSV, and XLSX with deduplication, confidence gating, and human review workflow.</li>
           <li><strong>iCloud Sync via CloudKit</strong> with runtime activation and seamless multi-device sync.</li>
           <li><strong>Home Screen Widget</strong> (WidgetKit) and <strong>StoreKit 2 subscriptions</strong> ($9.99/mo · $69.99/yr) with restore-purchase and entitlement enforcement.</li>
           <li>Localized onboarding, daily reminder notifications, CSV export, recurring expenses, <strong>zero-data-collection</strong> privacy posture.</li>
@@ -478,10 +482,13 @@
           <span class="chip">Swift Concurrency</span>
           <span class="chip">CloudKit</span>
           <span class="chip">VisionKit</span>
-          <span class="chip">Apple Speech</span>
+          <span class="chip">SFSpeechRecognizer</span>
+          <span class="chip">Whisper</span>
+          <span class="chip">OpenAI GPT</span>
           <span class="chip">StoreKit 2</span>
           <span class="chip">WidgetKit</span>
-          <span class="chip">LLM APIs</span>
+          <span class="chip">Mixpanel</span>
+          <span class="chip">Firebase</span>
         </div>
 
         <div class="project-links">
@@ -498,7 +505,7 @@
           <div class="project-title-wrap">
             <div class="project-meta">2025–Now · Bazaar Technologies · Pakistan</div>
             <h3 class="project-title">Bazaar — Grocery Delivery</h3>
-            <p class="project-role">Senior iOS Engineer → full-stack contributor (iOS · Android · Backend)</p>
+            <p class="project-role">Senior Software Engineer II → full-stack contributor (iOS · Android · Backend)</p>
           </div>
           <span class="project-tag">★ 4.5</span>
         </div>
@@ -514,6 +521,9 @@
         </div>
 
         <ul>
+          <li><strong>Architecture</strong> — modular navigation with <strong>Coordinator Pattern</strong> and Routers, enabling production go-live in under 4 months.</li>
+          <li><strong>KMP integration</strong> — shared networking, parsing, and business rules across Android and iOS, increasing dev velocity by <strong>60%</strong>.</li>
+          <li><strong>Swift Packages</strong> — published <strong>4 internal packages</strong> (UI Toolkit, Theme, Extensions, Localization), eliminating code duplication by <strong>90%</strong> across 3 apps.</li>
           <li><strong>iOS app build</strong> — home, search, cart, checkout, order tracking, payments, loyalty, wallet, multi-address management.</li>
           <li><strong>Payments</strong> — integrated JazzCash and secure card-add via in-app web view; session tracking and HTTPS hardening.</li>
           <li><strong>Loyalty & rewards</strong> — card link/de-link flow, OTP banner, points redemption, rewards list.</li>
@@ -521,12 +531,14 @@
           <li><strong>Discovery</strong> — product tag filters, brand carousels, "People also bought" suggestions, saved shopping lists, recipe details with ingredients + how-to-make tabs, seasonal campaigns (Lucky Draw, Eidi, Ramzan).</li>
           <li><strong>Android contributions</strong> — pitched in on Jetpack Compose features to keep platform parity.</li>
           <li><strong>Backend contributions</strong> — extended services for cart-by-ID, sponsored content tagging, voucher logic, device fingerprinting.</li>
+          <li><strong>UIKit → SwiftUI</strong> — cut technical debt by <strong>40%</strong>; optimized CI/CD pipelines improving build times by <strong>30%</strong>.</li>
           <li><strong>Reliability</strong> — Braze analytics wiring, crash fixes (favorites, cart deeplinks), v2.0 release with notification hub.</li>
         </ul>
 
         <div class="outcomes">
           <div class="outcome"><div class="outcome-num">4.5★</div><div class="outcome-label">App Store rating</div></div>
-          <div class="outcome"><div class="outcome-num">5,000+</div><div class="outcome-label">SKUs across 30+ categories</div></div>
+          <div class="outcome"><div class="outcome-num">60%</div><div class="outcome-label">Faster dev velocity via KMP</div></div>
+          <div class="outcome"><div class="outcome-num">90%</div><div class="outcome-label">Less code duplication</div></div>
           <div class="outcome"><div class="outcome-num">3</div><div class="outcome-label">Platforms shipped (iOS · Android · backend)</div></div>
         </div>
 
@@ -536,6 +548,9 @@
           <span class="chip">UIKit</span>
           <span class="chip">Kotlin</span>
           <span class="chip">Jetpack Compose</span>
+          <span class="chip">KMP</span>
+          <span class="chip">SPM</span>
+          <span class="chip">Coordinator Pattern</span>
           <span class="chip">REST APIs</span>
           <span class="chip">JazzCash</span>
           <span class="chip">Braze</span>
@@ -555,7 +570,7 @@
           <div class="project-title-wrap">
             <div class="project-meta">SadaPay · Pakistan</div>
             <h3 class="project-title">SadaPay — Money Made Simple</h3>
-            <p class="project-role">Senior iOS Engineer · Card Squad</p>
+            <p class="project-role">Senior Software Engineer · Card Squad</p>
           </div>
         </div>
 
@@ -575,6 +590,9 @@
           <li>Automated <strong>iOS CI/CD</strong> with GitHub Actions + Bitrise; standardised analytics events; streamlined iOS↔Android API contracts.</li>
           <li>Migrated to a <strong>modular MVVM architecture</strong> to unblock parallel squad development.</li>
           <li>Drove <strong>extreme programming practices</strong> — TDD, Trunk-Based Development, Ping Pong Programming, Mobbing.</li>
+          <li>Collaborated with <strong>10+ squads</strong> on a multi-modular codebase, enabling autonomous squad delivery.</li>
+          <li>Built a <strong>KMP analytics library</strong> for unified cross-platform event tracking; expanded into <strong>backend engineering</strong> with Kotlin, Spring Boot, and Kafka.</li>
+          <li>Automated <strong>API client generation</strong> via OpenAPI specs, reducing dev effort by <strong>40%</strong>.</li>
         </ul>
 
         <div class="outcomes">
@@ -593,7 +611,12 @@
           <span class="chip">XCUITest</span>
           <span class="chip">GitHub Actions</span>
           <span class="chip">Bitrise</span>
-          <span class="chip">KMM</span>
+          <span class="chip">Fastlane</span>
+          <span class="chip">KMP</span>
+          <span class="chip">Kotlin</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">Kafka</span>
+          <span class="chip">OpenAPI</span>
         </div>
 
         <div class="project-links">
@@ -606,9 +629,9 @@
         <div class="project-head">
           <div class="project-icon-emoji">🏦</div>
           <div class="project-title-wrap">
-            <div class="project-meta">YAP · UAE</div>
+            <div class="project-meta">Digitify · YAP · UAE</div>
             <h3 class="project-title">YAP — Your Digital Banking App</h3>
-            <p class="project-role">Lead iOS Engineer · Founding mobile engineer</p>
+            <p class="project-role">Senior Software Engineer · Founding mobile engineer</p>
           </div>
         </div>
 
@@ -656,9 +679,9 @@
         <div class="project-head">
           <div class="project-icon-emoji">🏢</div>
           <div class="project-title-wrap">
-            <div class="project-meta">EDB · UAE</div>
-            <h3 class="project-title">EDB Business Banking</h3>
-            <p class="project-role">Senior iOS Engineer</p>
+            <div class="project-meta">Digitify · EDB · UAE</div>
+            <h3 class="project-title">EDB 360 Business Banking</h3>
+            <p class="project-role">Senior Software Engineer</p>
           </div>
         </div>
 
@@ -673,10 +696,11 @@
         </div>
 
         <ul>
-          <li>Led iOS build of a business banking app with <strong>no minimum balance</strong> account creation.</li>
+          <li>Led iOS build of a business banking app with <strong>no minimum balance</strong> account creation, driving a <strong>30% increase in signups</strong> within 6 months.</li>
           <li>Architected <strong>modular MVVM-C</strong> for scalable, parallel team development.</li>
           <li>Integrated <strong>Promon Shielding SDK</strong> to harden app security.</li>
-          <li>Shipped <strong>local transfers</strong>, <strong>loan management</strong>, <strong>EID scanning</strong>, and <strong>ATM/CDM map</strong>.</li>
+          <li>Implemented <strong>Emirates ID scanning</strong> for automated onboarding — <strong>40% faster</strong> onboarding, <strong>95% fewer</strong> manual verification errors.</li>
+          <li>Shipped <strong>local transfers</strong>, <strong>loan management</strong>, and <strong>ATM/CDM map</strong>.</li>
           <li>Integrated <strong>Core Data</strong> for offline access to accounts and transaction history.</li>
         </ul>
 
