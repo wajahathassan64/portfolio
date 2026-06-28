@@ -1,7 +1,7 @@
 <h1 align="center">Wajahat Hassan</h1>
 
 <p align="center">
-  Senior iOS Engineer · Indie iOS Maker · Full-Stack Contributor<br/>
+  iOS Engineer · Indie iOS Maker · Full-Stack Contributor<br/>
   9 years shipping mobile products across Europe, the Middle East, and South Asia.
 </p>
 
@@ -17,7 +17,7 @@
 
 ## About
 
-I'm a senior iOS engineer with 9 years of experience building scalable, high-performance mobile applications for **fintech**, **digital banking**, and **AI-powered platforms** across Europe, the Middle East, and South Asia. I've worked with **SadaPay**, **YAP**, **EDB Business Banking**, and now **Bazaar Technologies**, building features that move money, process transactions at scale, and make life simpler.
+I'm an iOS engineer with 9 years of experience building scalable, high-performance mobile applications for **fintech**, **digital banking**, and **AI-powered platforms** across Europe, the Middle East, and South Asia. I've worked with **SadaPay**, **YAP**, **EDB Business Banking**, and now **Bazaar Technologies**, building features that move money, process transactions at scale, and make life simpler.
 
 I'm deep in **Swift**, **SwiftUI**, and clean architectures (MVVM, MVVM-C, VIPER), with strong fundamentals in **TDD**, **CI/CD**, modular design, and **Kotlin Multiplatform (KMP)**. At Bazaar, I've expanded into full-stack — contributing on **Android (Jetpack Compose)** and **backend** services alongside iOS.
 
@@ -208,4 +208,4 @@ Revizer is a Financial Management module for an ERP system — real-time financi
   <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/qr-code.png" width="200" alt="WhatsApp QR Code">
 </p>
 
-<p align="center"><sub>Open to senior iOS / mobile engineering roles. Available for contract & remote work.</sub></p>
+<p align="center"><sub>Open to iOS / mobile engineering roles. Available for contract & remote work.</sub></p>
