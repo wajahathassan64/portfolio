@@ -10,7 +10,7 @@
   <a href="mailto:wajahathassan64@gmail.com">Email</a> ·
   <a href="https://api.whatsapp.com/send?phone=+923101015199">WhatsApp</a> ·
   <a href="https://www.spendmind.co">SpendMind</a> ·
-  <a href="./assets/resume.pdf">Resume (PDF)</a>
+  <a href="https://drive.google.com/file/d/1y3xV4go7WS_PnLImgFO8gftfadkA9coi/view?usp=drive_link">Resume (PDF)</a>
 </p>
 
 ---
