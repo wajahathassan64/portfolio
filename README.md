@@ -1,7 +1,7 @@
 <h1 align="center">Wajahat Hassan</h1>
 
 <p align="center">
-  iOS Engineer · Indie iOS Maker · Full-Stack Contributor<br/>
+  Senior iOS Engineer · Indie iOS Maker · Full-Stack Contributor<br/>
   9 years shipping mobile products across Europe, the Middle East, and South Asia.
 </p>
 
@@ -208,4 +208,4 @@ Revizer is a Financial Management module for an ERP system — real-time financi
   <img src="https://github.com/wajahathassan64/portfolio/blob/main/assets/qr-code.png" width="200" alt="WhatsApp QR Code">
 </p>
 
-<p align="center"><sub>Open to iOS / mobile engineering roles. Available for contract & remote work.</sub></p>
+<p align="center"><sub>Open to senior iOS / mobile engineering roles. Available for contract & remote work.</sub></p>
