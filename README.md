@@ -17,7 +17,7 @@
 
 ## About
 
-I'm a senior iOS engineer with 9 years of experience building scalable, high-performance mobile applications for **fintech**, **digital banking**, and **AI-powered platforms** across Europe, the Middle East, and South Asia. I've worked with **SadaPay**, **YAP**, **EDB Business Banking**, and now **Bazaar Technologies**, building features that move money, process transactions at scale, and make life simpler.
+I'm an iOS engineer with 9 years of experience building scalable, high-performance mobile applications for **fintech**, **digital banking**, and **AI-powered platforms** across Europe, the Middle East, and South Asia. I've worked with **SadaPay**, **YAP**, **EDB Business Banking**, and now **Bazaar Technologies**, building features that move money, process transactions at scale, and make life simpler.
 
 I'm deep in **Swift**, **SwiftUI**, and clean architectures (MVVM, MVVM-C, VIPER), with strong fundamentals in **TDD**, **CI/CD**, modular design, and **Kotlin Multiplatform (KMP)**. At Bazaar, I've expanded into full-stack — contributing on **Android (Jetpack Compose)** and **backend** services alongside iOS.
 
