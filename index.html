@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Wajahat Hassan — Senior iOS Engineer · Indie Maker</title>
   <meta name="description" content="Senior iOS engineer with 9 years shipping fintech, banking, and consumer apps for millions of users. Indie maker of SpendMind." />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#0b0d17" />
   <meta property="og:title" content="Wajahat Hassan — Senior iOS Engineer · Indie Maker" />
   <meta property="og:description" content="Senior iOS engineer with 9 years shipping fintech, banking, and consumer apps for millions of users." />
   <meta property="og:type" content="website" />
@@ -14,64 +14,108 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #fafaf9;
-      --surface: #ffffff;
-      --border: #ececec;
-      --text: #0a0a0a;
-      --muted: #6b6b6b;
-      --soft: #9a9a9a;
-      --accent: #0a0a0a;
-      --chip-bg: #f3f3f1;
-      --chip-text: #333;
-      --radius: 14px;
-      --radius-lg: 22px;
-      --shadow-sm: 0 1px 2px rgba(10,10,10,0.04);
-      --shadow-md: 0 6px 24px rgba(10,10,10,0.06);
+      --bg: #0b0d17;
+      --surface: rgba(255,255,255,0.04);
+      --surface-hover: rgba(255,255,255,0.07);
+      --glass: rgba(255,255,255,0.06);
+      --glass-border: rgba(255,255,255,0.08);
+      --glass-hover: rgba(255,255,255,0.1);
+      --text: #e8eaf0;
+      --text-bright: #ffffff;
+      --muted: #8b8fa3;
+      --soft: #5a5e72;
+      --accent: #818cf8;
+      --accent2: #c084fc;
+      --accent3: #38bdf8;
+      --chip-bg: rgba(255,255,255,0.06);
+      --chip-text: #c4c7d4;
+      --radius: 16px;
+      --radius-lg: 24px;
       --max: 1080px;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0a0a0a;
-        --surface: #131313;
-        --border: #1f1f1f;
-        --text: #f5f5f4;
-        --muted: #a1a1aa;
-        --soft: #6b6b6b;
-        --accent: #f5f5f4;
-        --chip-bg: #1a1a1a;
-        --chip-text: #d4d4d4;
-        --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
-        --shadow-md: 0 6px 24px rgba(0,0,0,0.35);
-      }
-    }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      position: relative;
     }
-    a { color: inherit; text-decoration: none; transition: opacity .15s ease; }
-    a:hover { opacity: .65; }
+    a { color: inherit; text-decoration: none; transition: color .2s ease; }
+
+    /* ===== AMBIENT GRADIENT BLOBS ===== */
+    .gradient-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.35;
+      animation: float 20s ease-in-out infinite;
+    }
+    .blob-1 {
+      width: 600px; height: 600px;
+      background: #6366f1;
+      top: -10%; left: -10%;
+      animation-delay: 0s;
+    }
+    .blob-2 {
+      width: 500px; height: 500px;
+      background: #a855f7;
+      top: 30%; right: -15%;
+      animation-delay: -7s;
+    }
+    .blob-3 {
+      width: 450px; height: 450px;
+      background: #0ea5e9;
+      bottom: 10%; left: 20%;
+      animation-delay: -14s;
+    }
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(30px, -40px) scale(1.05); }
+      50% { transform: translate(-20px, 20px) scale(0.95); }
+      75% { transform: translate(15px, 30px) scale(1.02); }
+    }
+
     .container {
       max-width: var(--max);
       margin: 0 auto;
       padding: 0 28px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* NAV */
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: .1s; }
+    .reveal-d2 { transition-delay: .2s; }
+    .reveal-d3 { transition-delay: .3s; }
+
+    /* ===== NAV ===== */
     nav {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: color-mix(in srgb, var(--bg) 88%, transparent);
-      backdrop-filter: saturate(180%) blur(14px);
-      -webkit-backdrop-filter: saturate(180%) blur(14px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(11,13,23,0.7);
+      backdrop-filter: saturate(180%) blur(16px);
+      -webkit-backdrop-filter: saturate(180%) blur(16px);
+      border-bottom: 1px solid var(--glass-border);
     }
     .nav-inner {
       display: flex;
@@ -82,35 +126,67 @@
       margin: 0 auto;
       padding: 0 28px;
     }
-    .brand { font-weight: 700; letter-spacing: -0.01em; }
-    .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
-    .nav-links a:hover { color: var(--text); opacity: 1; }
+    .brand {
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-bright);
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      color: var(--muted);
+      align-items: center;
+    }
+    .nav-links a { transition: color .2s ease; }
+    .nav-links a:hover { color: var(--text-bright); opacity: 1; }
     @media (max-width: 640px) {
-      .nav-links { display: none; }
+      .nav-links { gap: 14px; font-size: 13px; }
     }
 
-    /* HERO */
-    header.hero { padding: 96px 0 64px; }
+    /* ===== HERO ===== */
+    header.hero {
+      padding: 100px 0 72px;
+      position: relative;
+    }
     .eyebrow {
       display: inline-block;
       font-size: 13px;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-      margin-bottom: 18px;
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      margin-bottom: 20px;
+      font-family: 'JetBrains Mono', monospace;
     }
     h1 {
-      font-size: clamp(40px, 6vw, 64px);
+      font-size: clamp(42px, 6.5vw, 68px);
       font-weight: 800;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.04em;
       line-height: 1.05;
-      margin: 0 0 20px;
+      margin: 0 0 24px;
+      color: var(--text-bright);
     }
+    h1 .gradient-text {
+      background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .typing-cursor {
+      display: inline-block;
+      width: 3px;
+      height: 0.85em;
+      background: var(--accent);
+      margin-left: 3px;
+      animation: blink 1s step-end infinite;
+      vertical-align: baseline;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
     .lede {
       font-size: clamp(17px, 2vw, 19px);
       color: var(--muted);
-      max-width: 680px;
-      margin: 0 0 32px;
+      max-width: 660px;
+      margin: 0 0 36px;
+      line-height: 1.7;
     }
     .lede strong { color: var(--text); font-weight: 600; }
     .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
@@ -118,106 +194,135 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 11px 18px;
+      padding: 12px 22px;
       border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--surface);
+      border: 1px solid var(--glass-border);
+      background: var(--glass);
+      backdrop-filter: blur(8px);
       font-size: 14px;
       font-weight: 500;
       color: var(--text);
-      transition: transform .15s ease, border-color .15s ease;
+      cursor: pointer;
+      transition: all .25s ease;
     }
-    .btn:hover { transform: translateY(-1px); border-color: var(--text); opacity: 1; }
-    .btn-primary { background: var(--text); color: var(--bg); border-color: var(--text); }
-    .btn-primary:hover { opacity: 1; transform: translateY(-1px); }
+    .btn:hover {
+      background: var(--glass-hover);
+      border-color: var(--accent);
+      color: var(--text-bright);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(129,140,248,0.15);
+      opacity: 1;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      border: none;
+    }
+    .btn-primary:hover {
+      box-shadow: 0 4px 24px rgba(129,140,248,0.35);
+      opacity: 1;
+    }
 
-    /* SECTION */
-    section { padding: 64px 0; }
-    .section-head { margin-bottom: 40px; }
+    /* ===== SECTIONS ===== */
+    section { padding: 72px 0; }
     .section-eyebrow {
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 12px;
-      color: var(--muted);
+      color: var(--accent);
       letter-spacing: 0.08em;
       text-transform: uppercase;
       margin-bottom: 10px;
     }
     .section-title {
-      font-size: clamp(28px, 4vw, 36px);
+      font-size: clamp(28px, 4vw, 38px);
       font-weight: 700;
-      letter-spacing: -0.025em;
-      margin: 0 0 12px;
+      letter-spacing: -0.03em;
+      margin: 0 0 14px;
+      color: var(--text-bright);
     }
-    .section-sub { color: var(--muted); max-width: 640px; margin: 0; }
+    .section-sub { color: var(--muted); max-width: 620px; margin: 0 0 40px; }
 
-    /* CHIPS */
-    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+    /* ===== CHIPS ===== */
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
     .chip {
-      display: inline-block;
-      padding: 5px 10px;
+      padding: 6px 12px;
       background: var(--chip-bg);
+      border: 1px solid transparent;
       color: var(--chip-text);
-      border-radius: 6px;
+      border-radius: 8px;
       font-size: 12px;
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-weight: 500;
+      transition: all .25s ease;
+      cursor: default;
+    }
+    .chip:hover {
+      background: rgba(129,140,248,0.12);
+      border-color: rgba(129,140,248,0.3);
+      color: var(--accent);
+      transform: translateY(-2px);
     }
 
-    /* PROJECT CARD */
+    /* ===== GLASS CARDS ===== */
     .project {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
       border-radius: var(--radius-lg);
       padding: 36px;
-      margin-bottom: 22px;
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow .25s ease, transform .25s ease;
+      margin-bottom: 24px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all .35s ease;
     }
-    .project:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .project:hover {
+      background: var(--glass-hover);
+      border-color: rgba(129,140,248,0.25);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 48px rgba(99,102,241,0.08), 0 0 0 1px rgba(129,140,248,0.15);
+    }
     .project-head {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       align-items: flex-start;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
     .project-icon {
-      width: 72px;
-      height: 72px;
+      width: 64px; height: 64px;
       border-radius: 16px;
       flex-shrink: 0;
-      background-color: var(--chip-bg);
       object-fit: cover;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform .3s ease;
     }
+    .project:hover .project-icon { transform: scale(1.06) rotate(-2deg); }
     .project-icon-emoji {
-      width: 72px;
-      height: 72px;
+      width: 64px; height: 64px;
       border-radius: 16px;
       flex-shrink: 0;
-      background: linear-gradient(135deg, #f5f5f4, #e7e5e4);
+      background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(168,85,247,0.2));
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 36px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      font-size: 32px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform .3s ease;
     }
-    @media (prefers-color-scheme: dark) {
-      .project-icon-emoji { background: linear-gradient(135deg, #1c1c1c, #262626); }
-    }
+    .project:hover .project-icon-emoji { transform: scale(1.06) rotate(-2deg); }
     .project-title-wrap { flex: 1; min-width: 0; }
     .project-meta {
-      font-size: 12px;
-      color: var(--muted);
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
-      letter-spacing: 0.04em;
-      margin-bottom: 6px;
+      font-size: 11px;
+      color: var(--soft);
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
+      margin-bottom: 6px;
     }
     .project-title {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 700;
       letter-spacing: -0.02em;
       margin: 0 0 4px;
+      color: var(--text-bright);
     }
     .project-role { color: var(--muted); font-size: 14px; margin: 0; }
     .project-tag {
@@ -225,98 +330,132 @@
       align-items: center;
       gap: 6px;
       font-size: 11px;
-      padding: 4px 10px;
+      padding: 5px 12px;
       border-radius: 999px;
-      background: var(--chip-bg);
-      color: var(--chip-text);
+      background: rgba(129,140,248,0.12);
+      color: var(--accent);
       margin-left: auto;
       font-weight: 500;
       flex-shrink: 0;
+      border: 1px solid rgba(129,140,248,0.2);
     }
     .project-tag.live::before {
       content: "";
-      width: 6px;
-      height: 6px;
+      width: 6px; height: 6px;
       border-radius: 50%;
-      background: #16a34a;
-      box-shadow: 0 0 0 3px rgba(22,163,74,0.18);
+      background: #34d399;
+      box-shadow: 0 0 0 3px rgba(52,211,153,0.2);
+      animation: pulse-dot 2s ease-in-out infinite;
     }
-    .project-desc { color: var(--muted); margin: 0 0 22px; font-size: 15px; }
+    @keyframes pulse-dot {
+      0%,100% { box-shadow: 0 0 0 3px rgba(52,211,153,0.2); }
+      50% { box-shadow: 0 0 0 8px rgba(52,211,153,0.05); }
+    }
+    .project-desc { color: var(--muted); margin: 0 0 24px; font-size: 15px; line-height: 1.7; }
     .project ul {
-      margin: 0 0 18px;
+      margin: 0 0 20px;
       padding-left: 18px;
       color: var(--text);
-      font-size: 15px;
+      font-size: 14px;
+      line-height: 1.7;
     }
-    .project ul li { margin-bottom: 8px; }
-    .project ul li strong { font-weight: 600; }
+    .project ul li { margin-bottom: 6px; }
+    .project ul li strong { font-weight: 600; color: var(--text-bright); }
     .project-links {
       display: flex;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
       margin-top: 20px;
       font-size: 14px;
     }
     .project-links a {
-      color: var(--muted);
+      color: var(--accent);
+      padding: 6px 0;
       border-bottom: 1px solid transparent;
-      transition: color .15s ease, border-color .15s ease;
+      transition: all .2s ease;
     }
-    .project-links a:hover { color: var(--text); border-bottom-color: var(--text); opacity: 1; }
-    .project-links a::after { content: " ↗"; font-size: 11px; }
+    .project-links a:hover { color: var(--text-bright); border-bottom-color: var(--accent); opacity: 1; }
+    .project-links a::after { content: " \2197"; font-size: 11px; }
 
-    /* SCREENSHOTS */
-    .shots {
+    /* ===== PHONE MOCKUPS ===== */
+    .phone-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin: 20px 0 24px;
+      gap: 16px;
+      margin: 24px 0 28px;
+      justify-items: center;
     }
-    .shots img {
+    .phone-frame {
+      position: relative;
+      background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 6px;
+      transition: transform .4s cubic-bezier(0.16,1,0.3,1), box-shadow .4s ease;
+      overflow: hidden;
       width: 100%;
-      border-radius: 12px;
-      border: 1px solid var(--border);
+      max-width: 200px;
+    }
+    .phone-frame::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px; height: 16px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 0 0 10px 10px;
+      z-index: 2;
+    }
+    .phone-frame:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 20px 50px rgba(99,102,241,0.15);
+    }
+    .phone-frame img {
+      width: 100%;
+      border-radius: 18px;
       display: block;
     }
-    .shots-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 18px;
-      background: var(--chip-bg);
-      border-radius: 12px;
-      color: var(--soft);
-      font-size: 13px;
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
-      margin: 20px 0 24px;
-      border: 1px dashed var(--border);
-    }
     @media (max-width: 640px) {
-      .shots { grid-template-columns: repeat(3, 1fr); gap: 6px; }
-      .project-head { gap: 16px; }
+      .phone-grid { gap: 8px; }
+      .phone-frame { border-radius: 16px; padding: 4px; max-width: none; }
+      .phone-frame::before { width: 36px; height: 12px; top: 4px; border-radius: 0 0 8px 8px; }
+      .phone-frame img { border-radius: 12px; }
+      .project-head { gap: 14px; }
       .project { padding: 24px; }
-      .project-icon, .project-icon-emoji { width: 56px; height: 56px; font-size: 28px; }
-      .project-title { font-size: 20px; }
+      .project-icon, .project-icon-emoji { width: 52px; height: 52px; font-size: 26px; }
+      .project-title { font-size: 19px; }
     }
 
-    /* OUTCOMES */
+    /* ===== OUTCOMES ===== */
     .outcomes {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 10px;
-      margin: 18px 0 6px;
+      margin: 20px 0 8px;
     }
     .outcome {
-      padding: 16px;
-      background: var(--chip-bg);
-      border-radius: 10px;
+      padding: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      transition: all .25s ease;
+    }
+    .outcome:hover {
+      background: rgba(129,140,248,0.08);
+      border-color: rgba(129,140,248,0.2);
+      transform: translateY(-2px);
     }
     .outcome-num {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
       letter-spacing: -0.02em;
       line-height: 1;
       margin-bottom: 6px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     .outcome-label {
       font-size: 12px;
@@ -324,46 +463,63 @@
       line-height: 1.4;
     }
 
-    /* CONTACT */
+    /* ===== CONTACT ===== */
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 12px;
     }
     .contact-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
       border-radius: var(--radius);
-      padding: 22px;
-      transition: border-color .15s ease, transform .15s ease;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+      transition: all .25s ease;
     }
-    .contact-card:hover { border-color: var(--text); transform: translateY(-2px); opacity: 1; }
+    .contact-card:hover {
+      background: var(--glass-hover);
+      border-color: rgba(129,140,248,0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(99,102,241,0.1);
+      opacity: 1;
+    }
     .contact-label {
-      font-size: 12px;
-      color: var(--muted);
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
-      letter-spacing: 0.04em;
+      font-size: 11px;
+      color: var(--soft);
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       margin-bottom: 6px;
     }
     .contact-value {
       font-weight: 600;
       font-size: 15px;
+      color: var(--text-bright);
       word-break: break-word;
     }
 
-    /* FOOTER */
+    /* ===== FOOTER ===== */
     footer {
       padding: 40px 0 60px;
       text-align: center;
       color: var(--soft);
       font-size: 13px;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--glass-border);
       margin-top: 40px;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
+
+  <!-- Ambient gradient background -->
+  <div class="gradient-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
 
   <nav>
     <div class="nav-inner">
@@ -380,12 +536,12 @@
   <main class="container">
 
     <header class="hero">
-      <span class="eyebrow">→ Senior iOS Engineer · Indie Maker · Karachi → Worldwide</span>
-      <h1>Hi, I'm Wajahat.<br/>I build mobile products people rely&nbsp;on.</h1>
-      <p class="lede">
+      <span class="eyebrow reveal">→ Senior iOS Engineer · Indie Maker · Karachi → Worldwide</span>
+      <h1 class="reveal reveal-d1">Hi, I'm Wajahat.<br/>I build <span class="gradient-text" id="typed"></span><span class="typing-cursor"></span></h1>
+      <p class="lede reveal reveal-d2">
         9 years building scalable mobile applications across <strong>fintech</strong>, <strong>digital banking</strong>, and <strong>AI-powered platforms</strong> — used by <strong>millions</strong> of customers across Europe, the Middle East, and South Asia. Currently building <strong>Bazaar</strong> (full-stack iOS + Android + backend) and shipping my own indie app, <strong>SpendMind</strong>, as a solo founder.
       </p>
-      <div class="cta-row">
+      <div class="cta-row reveal reveal-d3">
         <a class="btn btn-primary" href="#projects">View projects →</a>
         <a class="btn" href="mailto:wajahathassan64@gmail.com">Get in touch</a>
         <a class="btn" href="./assets/resume.pdf">Resume (PDF)</a>
@@ -393,12 +549,12 @@
     </header>
 
     <section id="about">
-      <div class="section-head">
+      <div class="reveal">
         <div class="section-eyebrow">01 · About</div>
         <h2 class="section-title">An iOS engineer who ships.</h2>
         <p class="section-sub">I've led iOS teams at SadaPay, YAP, and EDB Business Banking — building apps that scaled to over a million users and millions of monthly transactions. At Bazaar, I now ship full-stack: iOS, Android, and backend.</p>
       </div>
-      <div class="chips">
+      <div class="chips reveal reveal-d1">
         <span class="chip">Swift</span>
         <span class="chip">SwiftUI</span>
         <span class="chip">Objective-C</span>
@@ -425,14 +581,13 @@
     </section>
 
     <section id="projects">
-      <div class="section-head">
+      <div class="reveal">
         <div class="section-eyebrow">02 · Featured Work</div>
         <h2 class="section-title">Selected projects.</h2>
         <p class="section-sub">From a one-million-user banking app I led from scratch to a solo indie product on the App Store.</p>
       </div>
 
-      <!-- SpendMind -->
-      <article class="project">
+      <article class="project reveal">
         <div class="project-head">
           <img class="project-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/23/0a/04/230a04c1-2554-3e00-a370-239814601b53/AppIcon-0-1x_U007ephone-0-1-0-85-220-0.png/512x512bb.jpg" alt="SpendMind icon" />
           <div class="project-title-wrap">
@@ -442,22 +597,17 @@
           </div>
           <span class="project-tag live">Live on App Store</span>
         </div>
-
-        <p class="project-desc">
-          A voice-first, AI-powered expense tracker. Speak naturally — <em>"Spent $12 on coffee today"</em> — and AI extracts the amount, category, and date in seconds. 50+ languages, 50+ currencies, privacy-first, with iCloud sync across iPhone, iPad, and Mac.
-        </p>
-
-        <div class="shots">
-          <img src="./assets/spendmind1.jpg" alt="SpendMind voice-first home dashboard" />
-          <img src="./assets/spendmind2.jpg" alt="SpendMind onboarding categories" />
-          <img src="./assets/spendmind3.jpg" alt="SpendMind expense analytics" />
+        <p class="project-desc">A voice-first, AI-powered expense tracker. Speak naturally — <em>"Spent $12 on coffee today"</em> — and AI extracts the amount, category, and date in seconds. 50+ languages, 50+ currencies, privacy-first, with iCloud sync across iPhone, iPad, and Mac.</p>
+        <div class="phone-grid">
+          <div class="phone-frame"><img src="./assets/spendmind1.jpg" alt="SpendMind home" /></div>
+          <div class="phone-frame"><img src="./assets/spendmind2.jpg" alt="SpendMind categories" /></div>
+          <div class="phone-frame"><img src="./assets/spendmind3.jpg" alt="SpendMind analytics" /></div>
         </div>
-        <div class="shots">
-          <img src="./assets/spendmind4.jpg" alt="SpendMind AI chat assistant" />
-          <img src="./assets/spendmind5.jpg" alt="SpendMind on-device receipt scanner" />
-          <img src="./assets/spendmind6.jpg" alt="SpendMind recurring expenses" />
+        <div class="phone-grid">
+          <div class="phone-frame"><img src="./assets/spendmind4.jpg" alt="SpendMind AI chat" /></div>
+          <div class="phone-frame"><img src="./assets/spendmind5.jpg" alt="SpendMind receipt scanner" /></div>
+          <div class="phone-frame"><img src="./assets/spendmind6.jpg" alt="SpendMind recurring" /></div>
         </div>
-
         <ul>
           <li><strong>Built end-to-end as a one-person team</strong> — design, iOS engineering, AI pipeline, App Store launch.</li>
           <li><strong>Voice-to-expense pipeline</strong> using SFSpeechRecognizer + OpenAI GPT — extracts amount, category, and date with <strong>90%+ accuracy</strong> across 50+ languages.</li>
@@ -468,29 +618,15 @@
           <li><strong>Home Screen Widget</strong> (WidgetKit) and <strong>StoreKit 2 subscriptions</strong> ($9.99/mo · $69.99/yr) with restore-purchase and entitlement enforcement.</li>
           <li>Localized onboarding, daily reminder notifications, CSV export, recurring expenses, <strong>zero-data-collection</strong> privacy posture.</li>
         </ul>
-
         <div class="outcomes">
-          <div class="outcome"><div class="outcome-num">50+</div><div class="outcome-label">Languages supported</div></div>
-          <div class="outcome"><div class="outcome-num">50+</div><div class="outcome-label">Currencies</div></div>
+          <div class="outcome"><div class="outcome-num" data-count="50">0</div><div class="outcome-label">Languages supported</div></div>
+          <div class="outcome"><div class="outcome-num" data-count="50">0</div><div class="outcome-label">Currencies</div></div>
           <div class="outcome"><div class="outcome-num">0</div><div class="outcome-label">Data points collected</div></div>
           <div class="outcome"><div class="outcome-num">1</div><div class="outcome-label">Team size — me</div></div>
         </div>
-
         <div class="chips">
-          <span class="chip">Swift</span>
-          <span class="chip">SwiftUI</span>
-          <span class="chip">Swift Concurrency</span>
-          <span class="chip">CloudKit</span>
-          <span class="chip">VisionKit</span>
-          <span class="chip">SFSpeechRecognizer</span>
-          <span class="chip">Whisper</span>
-          <span class="chip">OpenAI GPT</span>
-          <span class="chip">StoreKit 2</span>
-          <span class="chip">WidgetKit</span>
-          <span class="chip">Mixpanel</span>
-          <span class="chip">Firebase</span>
+          <span class="chip">Swift</span><span class="chip">SwiftUI</span><span class="chip">Swift Concurrency</span><span class="chip">CloudKit</span><span class="chip">VisionKit</span><span class="chip">SFSpeechRecognizer</span><span class="chip">Whisper</span><span class="chip">OpenAI GPT</span><span class="chip">StoreKit 2</span><span class="chip">WidgetKit</span><span class="chip">Mixpanel</span><span class="chip">Firebase</span>
         </div>
-
         <div class="project-links">
           <a href="https://apps.apple.com/us/app/spendmind-ai-expense-tracker/id6754249390">App Store</a>
           <a href="https://www.spendmind.co">spendmind.co</a>
@@ -498,8 +634,7 @@
         </div>
       </article>
 
-      <!-- Bazaar -->
-      <article class="project">
+      <article class="project reveal">
         <div class="project-head">
           <img class="project-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3d/e0/38/3de0380a-a20f-9a37-6021-ce2938fedcff/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.jpeg/512x512bb.jpg" alt="Bazaar icon" />
           <div class="project-title-wrap">
@@ -509,17 +644,12 @@
           </div>
           <span class="project-tag">★ 4.5</span>
         </div>
-
-        <p class="project-desc">
-          Pakistan's leading grocery delivery app. 5,000+ products, next-day delivery to households and businesses across Karachi, Lahore, Islamabad, and beyond. I was hired as iOS lead and have since expanded into Android and backend work.
-        </p>
-
-        <div class="shots">
-          <img src="./assets/bazaar1.jpg" alt="Bazaar home and search" />
-          <img src="./assets/bazaar2.jpg" alt="Bazaar order delivery" />
-          <img src="./assets/bazaar3.jpg" alt="Bazaar product detail" />
+        <p class="project-desc">Pakistan's leading grocery delivery app. 5,000+ products, next-day delivery to households and businesses across Karachi, Lahore, Islamabad, and beyond.</p>
+        <div class="phone-grid">
+          <div class="phone-frame"><img src="./assets/bazaar1.jpg" alt="Bazaar home" /></div>
+          <div class="phone-frame"><img src="./assets/bazaar2.jpg" alt="Bazaar delivery" /></div>
+          <div class="phone-frame"><img src="./assets/bazaar3.jpg" alt="Bazaar product" /></div>
         </div>
-
         <ul>
           <li><strong>Architecture</strong> — modular navigation with <strong>Coordinator Pattern</strong> and Routers, enabling production go-live in under 4 months.</li>
           <li><strong>KMP integration</strong> — shared networking, parsing, and business rules across Android and iOS, increasing dev velocity by <strong>60%</strong>.</li>
@@ -528,43 +658,28 @@
           <li><strong>Payments</strong> — integrated JazzCash and secure card-add via in-app web view; session tracking and HTTPS hardening.</li>
           <li><strong>Loyalty & rewards</strong> — card link/de-link flow, OTP banner, points redemption, rewards list.</li>
           <li><strong>Cart & checkout</strong> — multi-address, delivery scheduling with on-time guarantee, voucher engine (free-delivery vouchers, percentage caps), order rating with App Store review integration.</li>
-          <li><strong>Discovery</strong> — product tag filters, brand carousels, "People also bought" suggestions, saved shopping lists, recipe details with ingredients + how-to-make tabs, seasonal campaigns (Lucky Draw, Eidi, Ramzan).</li>
+          <li><strong>Discovery</strong> — product tag filters, brand carousels, "People also bought" suggestions, saved shopping lists, recipe details, seasonal campaigns.</li>
           <li><strong>Android contributions</strong> — pitched in on Jetpack Compose features to keep platform parity.</li>
           <li><strong>Backend contributions</strong> — extended services for cart-by-ID, sponsored content tagging, voucher logic, device fingerprinting.</li>
           <li><strong>UIKit → SwiftUI</strong> — cut technical debt by <strong>40%</strong>; optimized CI/CD pipelines improving build times by <strong>30%</strong>.</li>
-          <li><strong>Reliability</strong> — Braze analytics wiring, crash fixes (favorites, cart deeplinks), v2.0 release with notification hub.</li>
+          <li><strong>Reliability</strong> — Braze analytics wiring, crash fixes, v2.0 release with notification hub.</li>
         </ul>
-
         <div class="outcomes">
           <div class="outcome"><div class="outcome-num">4.5★</div><div class="outcome-label">App Store rating</div></div>
-          <div class="outcome"><div class="outcome-num">60%</div><div class="outcome-label">Faster dev velocity via KMP</div></div>
-          <div class="outcome"><div class="outcome-num">90%</div><div class="outcome-label">Less code duplication</div></div>
-          <div class="outcome"><div class="outcome-num">3</div><div class="outcome-label">Platforms shipped (iOS · Android · backend)</div></div>
+          <div class="outcome"><div class="outcome-num" data-count="60" data-suffix="%">0</div><div class="outcome-label">Faster dev velocity via KMP</div></div>
+          <div class="outcome"><div class="outcome-num" data-count="90" data-suffix="%">0</div><div class="outcome-label">Less code duplication</div></div>
+          <div class="outcome"><div class="outcome-num">3</div><div class="outcome-label">Platforms shipped</div></div>
         </div>
-
         <div class="chips">
-          <span class="chip">Swift</span>
-          <span class="chip">SwiftUI</span>
-          <span class="chip">UIKit</span>
-          <span class="chip">Kotlin</span>
-          <span class="chip">Jetpack Compose</span>
-          <span class="chip">KMP</span>
-          <span class="chip">SPM</span>
-          <span class="chip">Coordinator Pattern</span>
-          <span class="chip">REST APIs</span>
-          <span class="chip">JazzCash</span>
-          <span class="chip">Braze</span>
-          <span class="chip">Google Places</span>
+          <span class="chip">Swift</span><span class="chip">SwiftUI</span><span class="chip">UIKit</span><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">KMP</span><span class="chip">SPM</span><span class="chip">Coordinator Pattern</span><span class="chip">REST APIs</span><span class="chip">JazzCash</span><span class="chip">Braze</span><span class="chip">Google Places</span>
         </div>
-
         <div class="project-links">
           <a href="https://apps.apple.com/us/app/bazaar-grocery-delivery/id6741764524">App Store</a>
           <a href="https://www.bazaarapp.com">bazaarapp.com</a>
         </div>
       </article>
 
-      <!-- SadaPay -->
-      <article class="project">
+      <article class="project reveal">
         <div class="project-head">
           <div class="project-icon-emoji">💸</div>
           <div class="project-title-wrap">
@@ -573,17 +688,12 @@
             <p class="project-role">Senior Software Engineer · Card Squad</p>
           </div>
         </div>
-
-        <p class="project-desc">
-          Fee-free digital wallet and Mastercard virtual debit card. SadaBiz enables Pakistani freelancers to receive international payments up to PKR 900K/month at the best FX rates.
-        </p>
-
-        <div class="shots">
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/sadapay1.PNG" alt="SadaPay dashboard" />
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/sadapay2.PNG" alt="SadaPay business dashboard" />
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/sadapay3.PNG" alt="SadaPay bills" />
+        <p class="project-desc">Fee-free digital wallet and Mastercard virtual debit card. SadaBiz enables Pakistani freelancers to receive international payments up to PKR 900K/month at the best FX rates.</p>
+        <div class="phone-grid">
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/sadapay1.PNG" alt="SadaPay dashboard" /></div>
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/sadapay2.PNG" alt="SadaPay business" /></div>
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/sadapay3.PNG" alt="SadaPay bills" /></div>
         </div>
-
         <ul>
           <li>Built <strong>Card Ordering</strong> end-to-end — a top revenue-generating feature.</li>
           <li>Designed and shipped <strong>Transaction History</strong> and improved <strong>Transaction Details</strong>.</li>
@@ -594,38 +704,22 @@
           <li>Built a <strong>KMP analytics library</strong> for unified cross-platform event tracking; expanded into <strong>backend engineering</strong> with Kotlin, Spring Boot, and Kafka.</li>
           <li>Automated <strong>API client generation</strong> via OpenAPI specs, reducing dev effort by <strong>40%</strong>.</li>
         </ul>
-
         <div class="outcomes">
-          <div class="outcome"><div class="outcome-num">97%</div><div class="outcome-label">Unit test coverage</div></div>
-          <div class="outcome"><div class="outcome-num">100%</div><div class="outcome-label">UI test feature coverage</div></div>
-          <div class="outcome"><div class="outcome-num">35%</div><div class="outcome-label">Faster feature testing</div></div>
-          <div class="outcome"><div class="outcome-num">90%</div><div class="outcome-label">Less QA dependency</div></div>
-          <div class="outcome"><div class="outcome-num">95%</div><div class="outcome-label">Fewer iOS↔Android discrepancies</div></div>
+          <div class="outcome"><div class="outcome-num" data-count="97" data-suffix="%">0</div><div class="outcome-label">Unit test coverage</div></div>
+          <div class="outcome"><div class="outcome-num" data-count="100" data-suffix="%">0</div><div class="outcome-label">UI test feature coverage</div></div>
+          <div class="outcome"><div class="outcome-num" data-count="35" data-suffix="%">0</div><div class="outcome-label">Faster feature testing</div></div>
+          <div class="outcome"><div class="outcome-num" data-count="90" data-suffix="%">0</div><div class="outcome-label">Less QA dependency</div></div>
+          <div class="outcome"><div class="outcome-num" data-count="95" data-suffix="%">0</div><div class="outcome-label">Fewer iOS↔Android discrepancies</div></div>
         </div>
-
         <div class="chips">
-          <span class="chip">Swift</span>
-          <span class="chip">MVVM</span>
-          <span class="chip">Modular</span>
-          <span class="chip">TDD</span>
-          <span class="chip">XCUITest</span>
-          <span class="chip">GitHub Actions</span>
-          <span class="chip">Bitrise</span>
-          <span class="chip">Fastlane</span>
-          <span class="chip">KMP</span>
-          <span class="chip">Kotlin</span>
-          <span class="chip">Spring Boot</span>
-          <span class="chip">Kafka</span>
-          <span class="chip">OpenAPI</span>
+          <span class="chip">Swift</span><span class="chip">MVVM</span><span class="chip">Modular</span><span class="chip">TDD</span><span class="chip">XCUITest</span><span class="chip">GitHub Actions</span><span class="chip">Bitrise</span><span class="chip">Fastlane</span><span class="chip">KMP</span><span class="chip">Kotlin</span><span class="chip">Spring Boot</span><span class="chip">Kafka</span><span class="chip">OpenAPI</span>
         </div>
-
         <div class="project-links">
           <a href="https://apps.apple.com/pk/app/sadapay-money-made-simple/id1543848524">App Store</a>
         </div>
       </article>
 
-      <!-- YAP -->
-      <article class="project">
+      <article class="project reveal">
         <div class="project-head">
           <div class="project-icon-emoji">🏦</div>
           <div class="project-title-wrap">
@@ -634,17 +728,12 @@
             <p class="project-role">Senior Software Engineer · Founding mobile engineer</p>
           </div>
         </div>
-
-        <p class="project-desc">
-          Full-stack digital banking in the UAE — 30-second signup, multi-currency Mastercard debit, virtual cards, bill splitting, QR payments, and rich spending analytics.
-        </p>
-
-        <div class="shots">
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/yap1.webp" alt="YAP card" />
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/yap3.webp" alt="YAP home" />
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/yap2.webp" alt="YAP analytics" />
+        <p class="project-desc">Full-stack digital banking in the UAE — 30-second signup, multi-currency Mastercard debit, virtual cards, bill splitting, QR payments, and rich spending analytics.</p>
+        <div class="phone-grid">
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/yap1.webp" alt="YAP card" /></div>
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/yap3.webp" alt="YAP home" /></div>
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/yap2.webp" alt="YAP analytics" /></div>
         </div>
-
         <ul>
           <li><strong>Led the iOS app</strong> from inception — reached <strong>1M+ customers</strong> in year one, processing millions of transactions monthly.</li>
           <li>Architected ground-up with <strong>modular MVVM-C</strong>, dependency containers, and <strong>RxSwift</strong>.</li>
@@ -652,30 +741,20 @@
           <li>Integrated <strong>Promon Shielding SDK</strong> for runtime security and tamper detection.</li>
           <li>Led the <strong>live support team</strong> — cleared a 500-ticket backlog in one week.</li>
         </ul>
-
         <div class="outcomes">
           <div class="outcome"><div class="outcome-num">1M+</div><div class="outcome-label">Customers in year one</div></div>
           <div class="outcome"><div class="outcome-num">Millions</div><div class="outcome-label">Monthly transactions</div></div>
-          <div class="outcome"><div class="outcome-num">500</div><div class="outcome-label">Support tickets cleared in 1 week</div></div>
+          <div class="outcome"><div class="outcome-num" data-count="500">0</div><div class="outcome-label">Tickets cleared in 1 week</div></div>
         </div>
-
         <div class="chips">
-          <span class="chip">Swift</span>
-          <span class="chip">MVVM-C</span>
-          <span class="chip">RxSwift</span>
-          <span class="chip">Modular</span>
-          <span class="chip">Core ML</span>
-          <span class="chip">Amazon ML</span>
-          <span class="chip">Promon</span>
+          <span class="chip">Swift</span><span class="chip">MVVM-C</span><span class="chip">RxSwift</span><span class="chip">Modular</span><span class="chip">Core ML</span><span class="chip">Amazon ML</span><span class="chip">Promon</span>
         </div>
-
         <div class="project-links">
           <a href="https://apps.apple.com/pk/app/yap-pakistan/id6743106523">App Store</a>
         </div>
       </article>
 
-      <!-- EDB -->
-      <article class="project">
+      <article class="project reveal">
         <div class="project-head">
           <div class="project-icon-emoji">🏢</div>
           <div class="project-title-wrap">
@@ -684,17 +763,12 @@
             <p class="project-role">Senior Software Engineer</p>
           </div>
         </div>
-
-        <p class="project-desc">
-          Business banking app for multi-million businesses — multi-account management, sub-accounts, local & international transfers, expense tracking, and role-based access for teams.
-        </p>
-
-        <div class="shots">
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/edb1.webp" alt="EDB card" />
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/edb2.webp" alt="EDB analytics" />
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/edb3.webp" alt="EDB home" />
+        <p class="project-desc">Business banking app for multi-million businesses — multi-account management, sub-accounts, local & international transfers, expense tracking, and role-based access for teams.</p>
+        <div class="phone-grid">
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/edb1.webp" alt="EDB card" /></div>
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/edb2.webp" alt="EDB analytics" /></div>
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/edb3.webp" alt="EDB home" /></div>
         </div>
-
         <ul>
           <li>Led iOS build of a business banking app with <strong>no minimum balance</strong> account creation, driving a <strong>30% increase in signups</strong> within 6 months.</li>
           <li>Architected <strong>modular MVVM-C</strong> for scalable, parallel team development.</li>
@@ -703,24 +777,15 @@
           <li>Shipped <strong>local transfers</strong>, <strong>loan management</strong>, and <strong>ATM/CDM map</strong>.</li>
           <li>Integrated <strong>Core Data</strong> for offline access to accounts and transaction history.</li>
         </ul>
-
         <div class="chips">
-          <span class="chip">Swift</span>
-          <span class="chip">MVVM-C</span>
-          <span class="chip">Coordinators</span>
-          <span class="chip">RxSwift</span>
-          <span class="chip">Modular</span>
-          <span class="chip">Core Data</span>
-          <span class="chip">EID Scanner</span>
+          <span class="chip">Swift</span><span class="chip">MVVM-C</span><span class="chip">Coordinators</span><span class="chip">RxSwift</span><span class="chip">Modular</span><span class="chip">Core Data</span><span class="chip">EID Scanner</span>
         </div>
-
         <div class="project-links">
           <a href="https://apps.apple.com/eg/app/edb-360-business-banking-app/id6689504517">App Store</a>
         </div>
       </article>
 
-      <!-- Revizer -->
-      <article class="project">
+      <article class="project reveal">
         <div class="project-head">
           <div class="project-icon-emoji">📊</div>
           <div class="project-title-wrap">
@@ -729,33 +794,26 @@
             <p class="project-role">iOS Engineer</p>
           </div>
         </div>
-
-        <p class="project-desc">
-          ERP financial management module — real-time insights, budgeting, expense tracking, AP/AR, GL management, and compliance-ready reporting.
-        </p>
-
-        <div class="shots">
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/rv1.png" alt="Revizer reports" />
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/rv2.png" alt="Revizer transactions" />
-          <img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/rv3.png" alt="Revizer analytics" />
+        <p class="project-desc">ERP financial management module — real-time insights, budgeting, expense tracking, AP/AR, GL management, and compliance-ready reporting.</p>
+        <div class="phone-grid">
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/rv1.png" alt="Revizer reports" /></div>
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/rv2.png" alt="Revizer transactions" /></div>
+          <div class="phone-frame"><img src="https://raw.githubusercontent.com/wajahathassan64/portfolio/main/assets/rv3.png" alt="Revizer analytics" /></div>
         </div>
-
         <div class="chips">
-          <span class="chip">Swift</span>
-          <span class="chip">MVC</span>
+          <span class="chip">Swift</span><span class="chip">MVC</span>
         </div>
       </article>
 
     </section>
 
     <section id="contact">
-      <div class="section-head">
+      <div class="reveal">
         <div class="section-eyebrow">03 · Contact</div>
         <h2 class="section-title">Let's build something together.</h2>
         <p class="section-sub">Open to senior iOS / mobile engineering roles, contract work, and indie collaborations. Based in Karachi — remote-friendly across timezones.</p>
       </div>
-
-      <div class="contact-grid">
+      <div class="contact-grid reveal reveal-d1">
         <a class="contact-card" href="mailto:wajahathassan64@gmail.com">
           <div class="contact-label">Email</div>
           <div class="contact-value">wajahathassan64@gmail.com</div>
@@ -783,6 +841,38 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Counter animation
+    const cObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target, target = +el.dataset.count, suffix = el.dataset.suffix || '+', start = performance.now();
+        (function tick(now) {
+          const p = Math.min((now - start) / 1400, 1), eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased) + (p >= 1 ? suffix : '');
+          if (p < 1) requestAnimationFrame(tick);
+        })(start);
+        cObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(el => cObs.observe(el));
+
+    // Typing animation
+    const phrases = ['mobile products people rely on.', 'fintech apps at scale.', 'AI-powered experiences.', 'indie apps from scratch.'];
+    let pi = 0, ci = 0, del = false;
+    const typed = document.getElementById('typed');
+    function type() {
+      const w = phrases[pi];
+      if (del) { typed.textContent = w.substring(0, ci--); if (ci < 0) { del = false; pi = (pi + 1) % phrases.length; setTimeout(type, 350); return; } setTimeout(type, 25); }
+      else { typed.textContent = w.substring(0, ci++); if (ci > w.length) { del = true; setTimeout(type, 2200); return; } setTimeout(type, 55); }
+    }
+    setTimeout(type, 600);
   </script>
 </body>
 </html>
